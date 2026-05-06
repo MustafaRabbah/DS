@@ -1,0 +1,304 @@
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+Q01 Statistics
+In 2025, what percentage of organisations experienced a cloud data breach?
+A. 22%
+B. 33%
+C. 44%
+D. 55%
+ANSWER C. 44%
+44% of organisations experienced a cloud data breach in 2025, underscoring the need for security
+measures beyond traditional perimeter defences.
+Q02 Statistics
+What was the global average cost of a data breach in 2025?
+A. $1.88 million
+B. $3.10 million
+C. $4.45 million
+D. $6.72 million
+ANSWER C. $4.45 million
+The global average cost reached approximately $4.45 million. Ransomware-related breaches averaged
+even higher at around $5.13 million.
+Q03 Statistics
+What was the average cost of a ransomware or extortion-related breach in 2025?
+A. $3.80 million
+B. $5.13 million
+C. $4.45 million
+D. $7.20 million
+ANSWER B. $5.13 million
+Ransomware and extortion-related breaches averaged around $5.13 million — higher than the overall
+average of $4.45 million.
+Q04 Threat Landscape
+Approximately how many new malware variants are created every day?
+A. 56,000
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+B. 560,000
+C. 5,600,000
+D. 56,000,000
+ANSWER B. 560,000
+More than 560,000 new malware variants are generated daily, indicating a threat landscape that
+traditional signature-based defences cannot keep pace with.
+Q05 Threat Landscape
+Why are traditional signature-based defences insufficient against modern
+malware?
+A. They are too expensive to maintain
+B. They require constant internet access
+C. They cannot keep pace with 560,000+ new variants daily
+D. They only work on Windows systems
+ANSWER C. They cannot keep pace with 560,000+ new variants daily
+The sheer volume of new malware variants makes it impossible for signature-based systems to detect
+all threats in time.
+Q06 AI Security
+What does AI-driven anomaly detection primarily do?
+A. Encrypts all database queries automatically
+B. Establishes behaviour baselines and flags real-time deviations
+C. Replaces human security analysts permanently
+D. Scans for known malware signatures
+ANSWER B. Establishes behaviour baselines and flags real-time deviations
+AI-driven anomaly detection uses machine learning to establish normal behaviour baselines and flag
+deviations like unusual logins or off-hours queries in real time.
+Q07 AI Security
+According to IBM Research, how much less does AI-assisted breach response
+cost on average?
+A. $0.88 million less
+B. $1.88 million less
+C. $2.45 million less
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+D. $3.10 million less
+ANSWER B. $1.88 million less
+AI-assisted breach response costs $1.88 million less on average — a 33% reduction compared to
+organisations without AI security automation.
+Q08 AI Security
+What percentage reduction in breach cost does AI security automation provide?
+A. 15%
+B. 22%
+C. 33%
+D. 48%
+ANSWER C. 33%
+AI-assisted response provides a 33% reduction in breach costs, saving approximately $1.88 million per
+incident on average.
+Q09 AI Security
+Which of the following is an example of an anomaly that AI detection would flag?
+A. A user logging in at their usual time
+B. A scheduled daily database backup
+C. Bulk data export at 3 AM by an internal account
+D. A password reset during business hours
+ANSWER C. Bulk data export at 3 AM by an internal account
+Bulk data exports during off-hours represent suspicious deviations from normal behaviour — exactly the
+type of anomaly AI systems are trained to flag.
+Q10 AI Security
+What is 'shadow AI' in the context of database security?
+A. An AI that monitors dark web activity
+B. Unsanctioned AI models deployed by employees without governance
+C. An AI backup system that operates offline
+D. The AI component within a firewall system
+ANSWER B. Unsanctioned AI models deployed by employees without governance
+Shadow AI refers to unsanctioned AI models deployed by employees without proper governance, which
+can access sensitive data without security controls.
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+Q11 AI Security
+Which organisation predicts enterprises will fully encounter the scope of shadow
+AI in 2025?
+A. Google
+B. Microsoft
+C. IBM
+D. Cisco
+ANSWER C. IBM
+IBM predicts enterprises will truly see the scope of shadow AI in 2025, as ungoverned AI tools
+proliferate across organisations.
+Q12 Zero Trust
+What is the core principle of Zero Trust Architecture?
+A. Trust internal users, verify external users
+B. Never trust, always verify
+C. Trust but verify on first access
+D. Trust verified devices by default
+ANSWER B. Never trust, always verify
+Zero Trust follows 'never trust, always verify' — every user, device, and request must be authenticated,
+authorised, and continuously validated regardless of location.
+Q13 Zero Trust
+What percentage of organisations favour a Zero Trust approach according to a
+2025 report?
+A. 72%
+B. 81%
+C. 88%
+D. 96%
+ANSWER D. 96%
+96% of organisations favour a Zero Trust approach, with 81% planning to implement Zero Trust
+strategies within the next 12 months.
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+Q14 Zero Trust
+What percentage of organisations plan to implement Zero Trust within the next 12
+months?
+A. 63%
+B. 72%
+C. 81%
+D. 96%
+ANSWER C. 81%
+81% of organisations plan to implement Zero Trust strategies within the next 12 months, according to a
+2025 report.
+Q15 Zero Trust
+Which Zero Trust principle ensures users receive only the minimum permissions
+needed?
+A. Micro-Segmentation
+B. Phishing-Resistant MFA
+C. Continuous Authentication
+D. Least Privilege Access
+ANSWER D. Least Privilege Access
+Least Privilege Access ensures users get only the minimum permissions required for their role, limiting
+damage from compromised accounts.
+Q16 Zero Trust
+What does Micro-Segmentation achieve in a Zero Trust model?
+A. Encrypts all traffic between servers
+B. Monitors user behaviour in real time
+C. Isolates network segments to contain breaches
+D. Applies biometric authentication to all users
+ANSWER C. Isolates network segments to contain breaches
+Micro-Segmentation isolates network segments so that if one is compromised, the breach cannot easily
+spread to other parts of the network.
+Q17 Zero Trust
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+Which authentication method is considered 'phishing-resistant' in the Zero Trust
+framework?
+A. Email OTP codes
+B. SMS-based 2FA
+C. Passkeys and biometric authentication
+D. Security questions
+ANSWER C. Passkeys and biometric authentication
+Passkeys and biometric authentication are phishing-resistant MFA methods because they cannot be
+intercepted or replicated via social engineering.
+Q18 Zero Trust
+What does Continuous Authentication mean in a Zero Trust database
+environment?
+A. Requiring a new login after every query
+B. Verifying identity at login only
+C. Validating identity throughout the entire session
+D. Sending OTP codes every 10 minutes
+ANSWER C. Validating identity throughout the entire session
+Continuous Authentication means identity is verified throughout the session — not just at login —
+ensuring the legitimate user remains in control.
+Q19 Quantum Security
+Why is quantum computing a threat to current database encryption?
+A. It causes hardware overheating
+B. It can break public-key encryption standards almost instantly
+C. It disrupts internet routing protocols
+D. It floods systems with fake authentication requests
+ANSWER B. It can break public-key encryption standards almost instantly
+Quantum computers could eventually break today's public-key encryption almost instantly, rendering
+RSA and ECC-based systems vulnerable.
+Q20 Quantum Security
+What is the 'harvest now, decrypt later' strategy used by adversaries?
+A. Stealing encryption keys during a breach
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+B. Collecting encrypted data today to decrypt once quantum computing matures
+C. Gradually breaking encryption over years using botnets
+D. Harvesting biometric data for future authentication attacks
+ANSWER B. Collecting encrypted data today to decrypt once quantum computing
+matures
+Adversaries collect encrypted data today knowing they cannot currently decrypt it, planning to use
+future quantum computers to break the encryption later.
+Q21 Quantum Security
+What percentage of global organisations plan to migrate to post-quantum
+cryptography within five years?
+A. 41%
+B. 51%
+C. 61%
+D. 71%
+ANSWER C. 61%
+61% of global organisations plan to migrate to post-quantum cryptography (PQC) within five years,
+according to a 2024 Entrust study.
+Q22 Quantum Security
+Which body is responsible for finalising approved quantum-resistant algorithms?
+A. IEEE
+B. ISO
+C. NIST
+D. IETF
+ANSWER C. NIST
+NIST (National Institute of Standards and Technology) is finalising the approved post-quantum
+cryptographic algorithms organisations should adopt.
+Q23 Blockchain
+How does blockchain improve database security through 'data immutability'?
+A. It prevents all read access to the database
+B. It encrypts all data with a rotating key
+C. Recorded data cannot be altered or deleted
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+D. It requires biometric sign-off on every transaction
+ANSWER C. Recorded data cannot be altered or deleted
+Blockchain's immutability means once data is recorded it cannot be altered or deleted, providing a
+tamper-proof audit trail.
+Q24 Blockchain
+What security advantage does blockchain's decentralisation provide?
+A. Faster query processing speed
+B. Eliminates single points of failure
+C. Allows anonymous transactions
+D. Reduces storage costs
+ANSWER B. Eliminates single points of failure
+Decentralised architecture eliminates single points of failure — compromising one node does not
+compromise the entire database record.
+Q25 Blockchain
+Which blockchain property is most useful for maintaining compliance audit
+trails?
+A. Mining difficulty
+B. Token issuance
+C. Secure and transparent audit trails
+D. Smart contract execution
+ANSWER C. Secure and transparent audit trails
+Blockchain provides secure, transparent, and verifiable records of all database transactions — critical
+for compliance and forensic investigation.
+Q26 Data Masking
+What does dynamic data masking do at the point of access?
+A. Permanently deletes sensitive fields from the database
+B. Replaces sensitive data with obfuscated or pseudonymised values
+C. Encrypts entire database tables at rest
+D. Backs up data to an isolated environment
+ANSWER B. Replaces sensitive data with obfuscated or pseudonymised values
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+Dynamic data masking replaces sensitive data with obfuscated or pseudonymised values at the point of
+access so unauthorised users never see real data.
+Q27 Data Masking
+Which regulations make dynamic data masking particularly critical for
+compliance?
+A. HIPAA, SOX, and PCI-DSS only
+B. GDPR, HIPAA, and CCPA
+C. ISO 27001, NIST, and FISMA
+D. FERPA, COPPA, and GLBA
+ANSWER B. GDPR, HIPAA, and CCPA
+Dynamic data masking is critical for GDPR, HIPAA, and CCPA compliance, ensuring sensitive personal
+and health data is never exposed to unauthorised users.
+Q28 Cloud Security
+What is the primary function of Cloud Security Posture Management (CSPM)?
+A. Encrypts cloud traffic between regions
+B. Continuously monitors and remediates cloud misconfigurations in real time
+C. Backs up cloud databases automatically
+D. Provides identity verification for cloud users
+ANSWER B. Continuously monitors and remediates cloud misconfigurations in
+real time
+CSPM continuously monitors cloud infrastructure to identify and remediate security risks and
+misconfigurations before they lead to a breach.
+Q29 Cloud Security
+What key advantage does CSPM provide in multi-cloud environments?
+A. It reduces cloud licensing fees
+B. It consolidates all databases into one region
+C. It automatically detects security gaps across all cloud providers
+D. It disables unsecured APIs immediately
+ANSWER C. It automatically detects security gaps across all cloud providers
+CSPM ensures security gaps across complex multi-cloud environments are detected automatically
+rather than discovered after a breach occurs.
+Database Security — Practical MCQ Examination | April 2025
+Database Security MCQ Bank | 2025
+Q30 Action Plan
+Which of the following is NOT one of the 6 recommended steps in the 2025
+Database Security Action Plan?
+A. Deploy AI-powered anomaly detection
+B. Implement Zero Trust with least-privilege access
+C. Replace all cloud databases with on-premise systems
+D. Invest in continuous team training
+ANSWER C. Replace all cloud databases with on-premise systems
+The 6 steps include AI detection, Zero Trust, quantum-readiness, blockchain evaluation, dynamic data
+masking, and team training. Replacing cloud with on-premise is not recommended

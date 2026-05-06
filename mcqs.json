@@ -1,0 +1,995 @@
+{
+  "title": "Database Security MCQ Bank",
+  "questions": [
+    {
+      "id": 1,
+      "category": "Statistics",
+      "question": "In 2025, what percentage of organisations experienced a cloud data breach?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "22%",
+          "text_ar": "22%"
+        },
+        {
+          "letter": "B",
+          "text": "33%",
+          "text_ar": "33%"
+        },
+        {
+          "letter": "C",
+          "text": "44%",
+          "text_ar": "44%"
+        },
+        {
+          "letter": "D",
+          "text": "55%",
+          "text_ar": "55%"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "44%",
+      "explanation": "44% of organisations experienced a cloud data breach in 2025, underscoring the need for security measures beyond traditional perimeter defences.",
+      "question_ar": "في عام 2025، ما هي النسبة المئوية للمؤسسات التي تعرضت لاختراق البيانات السحابية؟",
+      "correct_text_ar": "44%",
+      "explanation_ar": "شهدت 44% من المؤسسات اختراقًا للبيانات السحابية في عام 2025، مما يؤكد الحاجة إلى اتخاذ تدابير أمنية تتجاوز الدفاعات المحيطة التقليدية."
+    },
+    {
+      "id": 2,
+      "category": "Statistics",
+      "question": "What was the global average cost of a data breach in 2025?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "$1.88 million",
+          "text_ar": "1.88 مليون دولار"
+        },
+        {
+          "letter": "B",
+          "text": "$3.10 million",
+          "text_ar": "3.10 مليون دولار"
+        },
+        {
+          "letter": "C",
+          "text": "$4.45 million",
+          "text_ar": "4.45 مليون دولار"
+        },
+        {
+          "letter": "D",
+          "text": "$6.72 million",
+          "text_ar": "6.72 مليون دولار"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "$4.45 million",
+      "explanation": "The global average cost reached approximately $4.45 million. Ransomware-related breaches averaged even higher at around $5.13 million.",
+      "question_ar": "ما هو متوسط ​​التكلفة العالمية لاختراق البيانات في عام 2025؟",
+      "correct_text_ar": "4.45 مليون دولار",
+      "explanation_ar": "وبلغ متوسط ​​التكلفة العالمية حوالي 4.45 مليون دولار. وبلغ متوسط ​​الخروقات المرتبطة ببرامج الفدية أعلى من ذلك بنحو 5.13 مليون دولار."
+    },
+    {
+      "id": 3,
+      "category": "Statistics",
+      "question": "What was the average cost of a ransomware or extortion-related breach in 2025?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "$3.80 million",
+          "text_ar": "3.80 مليون دولار"
+        },
+        {
+          "letter": "B",
+          "text": "$5.13 million",
+          "text_ar": "5.13 مليون دولار"
+        },
+        {
+          "letter": "C",
+          "text": "$4.45 million",
+          "text_ar": "4.45 مليون دولار"
+        },
+        {
+          "letter": "D",
+          "text": "$7.20 million",
+          "text_ar": "7.20 مليون دولار"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "$5.13 million",
+      "explanation": "Ransomware and extortion-related breaches averaged around $5.13 million — higher than the overall average of $4.45 million.",
+      "question_ar": "ما هو متوسط ​​تكلفة برامج الفدية أو الاختراقات المرتبطة بالابتزاز في عام 2025؟",
+      "correct_text_ar": "5.13 مليون دولار",
+      "explanation_ar": "بلغ متوسط ​​الخروقات المتعلقة ببرامج الفدية والابتزاز حوالي 5.13 مليون دولار، وهو أعلى من المتوسط ​​الإجمالي البالغ 4.45 مليون دولار."
+    },
+    {
+      "id": 4,
+      "category": "Threat Landscape",
+      "question": "Approximately how many new malware variants are created every day?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "56,000",
+          "text_ar": "56000"
+        },
+        {
+          "letter": "B",
+          "text": "560,000",
+          "text_ar": "560.000"
+        },
+        {
+          "letter": "C",
+          "text": "5,600,000",
+          "text_ar": "5,600,000"
+        },
+        {
+          "letter": "D",
+          "text": "56,000,000",
+          "text_ar": "56,000,000"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "560,000",
+      "explanation": "More than 560,000 new malware variants are generated daily, indicating a threat landscape that traditional signature-based defences cannot keep pace with.",
+      "question_ar": "ما هو عدد متغيرات البرامج الضارة الجديدة التي يتم إنشاؤها كل يوم تقريبًا؟",
+      "correct_text_ar": "560.000",
+      "explanation_ar": "يتم إنشاء أكثر من 560.000 نوع جديد من البرامج الضارة يوميًا، مما يشير إلى مشهد تهديدات لا تستطيع الدفاعات التقليدية القائمة على التوقيع مواكبته."
+    },
+    {
+      "id": 5,
+      "category": "Threat Landscape",
+      "question": "Why are traditional signature-based defences insufficient against modern malware?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "They are too expensive to maintain",
+          "text_ar": "فهي مكلفة للغاية للمحافظة عليها"
+        },
+        {
+          "letter": "B",
+          "text": "They require constant internet access",
+          "text_ar": "أنها تتطلب الوصول المستمر إلى الإنترنت"
+        },
+        {
+          "letter": "C",
+          "text": "They cannot keep pace with 560,000+ new variants daily",
+          "text_ar": "لا يمكنهم مواكبة أكثر من 560.000+ متغير جديد يوميًا"
+        },
+        {
+          "letter": "D",
+          "text": "They only work on Windows systems",
+          "text_ar": "إنهم يعملون فقط على أنظمة Windows"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "They cannot keep pace with 560,000+ new variants daily",
+      "explanation": "The sheer volume of new malware variants makes it impossible for signature-based systems to detect all threats in time.",
+      "question_ar": "لماذا تعتبر الدفاعات التقليدية القائمة على التوقيع غير كافية ضد البرامج الضارة الحديثة؟",
+      "correct_text_ar": "لا يمكنهم مواكبة أكثر من 560.000+ متغير جديد يوميًا",
+      "explanation_ar": "إن الحجم الهائل لمتغيرات البرامج الضارة الجديدة يجعل من المستحيل على الأنظمة القائمة على التوقيع اكتشاف جميع التهديدات في الوقت المناسب."
+    },
+    {
+      "id": 6,
+      "category": "AI Security",
+      "question": "What does AI-driven anomaly detection primarily do?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Encrypts all database queries automatically",
+          "text_ar": "تشفير كافة استعلامات قاعدة البيانات تلقائيا"
+        },
+        {
+          "letter": "B",
+          "text": "Establishes behaviour baselines and flags real-time deviations",
+          "text_ar": "يحدد خطوط الأساس للسلوك ويحدد الانحرافات في الوقت الحقيقي"
+        },
+        {
+          "letter": "C",
+          "text": "Replaces human security analysts permanently",
+          "text_ar": "يحل محل محللي الأمن البشري بشكل دائم"
+        },
+        {
+          "letter": "D",
+          "text": "Scans for known malware signatures",
+          "text_ar": "يقوم بالمسح بحثًا عن توقيعات البرامج الضارة المعروفة"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Establishes behaviour baselines and flags real-time deviations",
+      "explanation": "AI-driven anomaly detection uses machine learning to establish normal behaviour baselines and flag deviations like unusual logins or off-hours queries in real time.",
+      "question_ar": "ما الذي يفعله اكتشاف الشذوذ المعتمد على الذكاء الاصطناعي في المقام الأول؟",
+      "correct_text_ar": "يحدد خطوط الأساس للسلوك ويحدد الانحرافات في الوقت الحقيقي",
+      "explanation_ar": "يستخدم اكتشاف الحالات الشاذة المستند إلى الذكاء الاصطناعي التعلم الآلي لإنشاء خطوط أساسية للسلوك الطبيعي والإبلاغ عن الانحرافات مثل عمليات تسجيل الدخول غير العادية أو الاستعلامات خارج ساعات العمل في الوقت الفعلي."
+    },
+    {
+      "id": 7,
+      "category": "AI Security",
+      "question": "According to IBM Research, how much less does AI-assisted breach response cost on average?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "$0.88 million less",
+          "text_ar": "0.88 مليون دولار أقل"
+        },
+        {
+          "letter": "B",
+          "text": "$1.88 million less",
+          "text_ar": "1.88 مليون دولار أقل"
+        },
+        {
+          "letter": "C",
+          "text": "$2.45 million less",
+          "text_ar": "أقل بـ 2.45 مليون دولار"
+        },
+        {
+          "letter": "D",
+          "text": "$3.10 million less",
+          "text_ar": "3.10 مليون دولار أقل"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "$1.88 million less",
+      "explanation": "AI-assisted breach response costs $1.88 million less on average — a 33% reduction compared to organisations without AI security automation.",
+      "question_ar": "وفقًا لأبحاث IBM، ما هي تكلفة الاستجابة للانتهاكات بمساعدة الذكاء الاصطناعي في المتوسط؟",
+      "correct_text_ar": "1.88 مليون دولار أقل",
+      "explanation_ar": "تكلف الاستجابة للاختراق بمساعدة الذكاء الاصطناعي أقل بمقدار 1.88 مليون دولار في المتوسط ​​- وهو انخفاض بنسبة 33% مقارنة بالمؤسسات التي لا تمتلك أتمتة أمان الذكاء الاصطناعي."
+    },
+    {
+      "id": 8,
+      "category": "AI Security",
+      "question": "What percentage reduction in breach cost does AI security automation provide?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "15%",
+          "text_ar": "15%"
+        },
+        {
+          "letter": "B",
+          "text": "22%",
+          "text_ar": "22%"
+        },
+        {
+          "letter": "C",
+          "text": "33%",
+          "text_ar": "33%"
+        },
+        {
+          "letter": "D",
+          "text": "48%",
+          "text_ar": "48%"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "33%",
+      "explanation": "AI-assisted response provides a 33% reduction in breach costs, saving approximately $1.88 million per incident on average.",
+      "question_ar": "ما هي النسبة المئوية للتخفيض في تكلفة الاختراق التي توفرها أتمتة أمان الذكاء الاصطناعي؟",
+      "correct_text_ar": "33%",
+      "explanation_ar": "توفر الاستجابة المدعومة بالذكاء الاصطناعي انخفاضًا بنسبة 33% في تكاليف الاختراق، مما يوفر حوالي 1.88 مليون دولار لكل حادثة في المتوسط."
+    },
+    {
+      "id": 9,
+      "category": "AI Security",
+      "question": "Which of the following is an example of an anomaly that AI detection would flag?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A user logging in at their usual time",
+          "text_ar": "يقوم المستخدم بتسجيل الدخول في وقته المعتاد"
+        },
+        {
+          "letter": "B",
+          "text": "A scheduled daily database backup",
+          "text_ar": "نسخة احتياطية يومية مجدولة لقاعدة البيانات"
+        },
+        {
+          "letter": "C",
+          "text": "Bulk data export at 3 AM by an internal account",
+          "text_ar": "تصدير البيانات المجمعة في الساعة 3 صباحًا بواسطة حساب داخلي"
+        },
+        {
+          "letter": "D",
+          "text": "A password reset during business hours",
+          "text_ar": "إعادة تعيين كلمة المرور خلال ساعات العمل"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Bulk data export at 3 AM by an internal account",
+      "explanation": "Bulk data exports during off-hours represent suspicious deviations from normal behaviour — exactly the type of anomaly AI systems are trained to flag.",
+      "question_ar": "أي مما يلي يعد مثالاً على حالة شاذة يمكن أن يشير إليها اكتشاف الذكاء الاصطناعي؟",
+      "correct_text_ar": "تصدير البيانات المجمعة في الساعة 3 صباحًا بواسطة حساب داخلي",
+      "explanation_ar": "تمثل عمليات تصدير البيانات المجمعة خارج ساعات العمل انحرافات مشبوهة عن السلوك الطبيعي - وهو بالضبط نوع الشذوذ الذي يتم تدريب أنظمة الذكاء الاصطناعي على الإبلاغ عنه."
+    },
+    {
+      "id": 10,
+      "category": "AI Security",
+      "question": "What is 'shadow AI' in the context of database security?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "An AI that monitors dark web activity",
+          "text_ar": "الذكاء الاصطناعي الذي يراقب نشاط الويب المظلم"
+        },
+        {
+          "letter": "B",
+          "text": "Unsanctioned AI models deployed by employees without governance",
+          "text_ar": "نماذج الذكاء الاصطناعي غير المصرح بها التي ينشرها الموظفون دون حوكمة"
+        },
+        {
+          "letter": "C",
+          "text": "An AI backup system that operates offline",
+          "text_ar": "نظام نسخ احتياطي يعمل بالذكاء الاصطناعي يعمل دون الاتصال بالإنترنت"
+        },
+        {
+          "letter": "D",
+          "text": "The AI component within a firewall system",
+          "text_ar": "مكون الذكاء الاصطناعي داخل نظام جدار الحماية"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Unsanctioned AI models deployed by employees without governance",
+      "explanation": "Shadow AI refers to unsanctioned AI models deployed by employees without proper governance, which can access sensitive data without security controls.",
+      "question_ar": "ما هو \"الذكاء الاصطناعي الظل\" في سياق أمن قاعدة البيانات؟",
+      "correct_text_ar": "نماذج الذكاء الاصطناعي غير المصرح بها التي ينشرها الموظفون دون حوكمة",
+      "explanation_ar": "يشير Shadow AI إلى نماذج الذكاء الاصطناعي غير المصرح بها التي ينشرها الموظفون دون حوكمة مناسبة، والتي يمكنها الوصول إلى البيانات الحساسة دون ضوابط أمنية."
+    },
+    {
+      "id": 11,
+      "category": "AI Security",
+      "question": "Which organisation predicts enterprises will fully encounter the scope of shadow AI in 2025?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Google",
+          "text_ar": "جوجل"
+        },
+        {
+          "letter": "B",
+          "text": "Microsoft",
+          "text_ar": "مايكروسوفت"
+        },
+        {
+          "letter": "C",
+          "text": "IBM",
+          "text_ar": "آي بي إم"
+        },
+        {
+          "letter": "D",
+          "text": "Cisco",
+          "text_ar": "سيسكو"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "IBM",
+      "explanation": "IBM predicts enterprises will truly see the scope of shadow AI in 2025, as ungoverned AI tools proliferate across organisations.",
+      "question_ar": "ما هي المنظمة التي تتوقع أن تواجه الشركات نطاق ظل الذكاء الاصطناعي بشكل كامل في عام 2025؟",
+      "correct_text_ar": "آي بي إم",
+      "explanation_ar": "وتتوقع شركة IBM أن ترى الشركات حقًا نطاق الظل للذكاء الاصطناعي في عام 2025، مع انتشار أدوات الذكاء الاصطناعي غير الخاضعة للرقابة عبر المؤسسات."
+    },
+    {
+      "id": 12,
+      "category": "Zero Trust",
+      "question": "What is the core principle of Zero Trust Architecture?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Trust internal users, verify external users",
+          "text_ar": "الثقة بالمستخدمين الداخليين، والتحقق من المستخدمين الخارجيين"
+        },
+        {
+          "letter": "B",
+          "text": "Never trust, always verify",
+          "text_ar": "لا تثق أبدًا، تحقق دائمًا"
+        },
+        {
+          "letter": "C",
+          "text": "Trust but verify on first access",
+          "text_ar": "ثق ولكن تحقق عند الوصول الأول"
+        },
+        {
+          "letter": "D",
+          "text": "Trust verified devices by default",
+          "text_ar": "الثقة بالأجهزة التي تم التحقق منها بشكل افتراضي"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Never trust, always verify",
+      "explanation": "Zero Trust follows 'never trust, always verify' — every user, device, and request must be authenticated, authorised, and continuously validated regardless of location.",
+      "question_ar": "ما هو المبدأ الأساسي لهندسة الثقة المعدومة؟",
+      "correct_text_ar": "لا تثق أبدًا، تحقق دائمًا",
+      "explanation_ar": "يتبع برنامج Zero Trust مبدأ \"لا تثق أبدًا، تحقق دائمًا\" - يجب مصادقة كل مستخدم وجهاز وطلب، وتفويضه، والتحقق من صحته بشكل مستمر بغض النظر عن الموقع."
+    },
+    {
+      "id": 13,
+      "category": "Zero Trust",
+      "question": "What percentage of organisations favour a Zero Trust approach according to a 2025 report?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "72%",
+          "text_ar": "72%"
+        },
+        {
+          "letter": "B",
+          "text": "81%",
+          "text_ar": "81%"
+        },
+        {
+          "letter": "C",
+          "text": "88%",
+          "text_ar": "88%"
+        },
+        {
+          "letter": "D",
+          "text": "96%",
+          "text_ar": "96%"
+        }
+      ],
+      "correct_letter": "D",
+      "correct_text": "96%",
+      "explanation": "96% of organisations favour a Zero Trust approach, with 81% planning to implement Zero Trust strategies within the next 12 months.",
+      "question_ar": "ما هي النسبة المئوية للمؤسسات التي تفضل نهج الثقة المعدومة وفقًا لتقرير عام 2025؟",
+      "correct_text_ar": "96%",
+      "explanation_ar": "تفضل 96% من المؤسسات نهج الثقة المعدومة، ويخطط 81% منها لتنفيذ استراتيجيات الثقة المعدومة خلال الـ 12 شهرًا القادمة."
+    },
+    {
+      "id": 14,
+      "category": "Zero Trust",
+      "question": "What percentage of organisations plan to implement Zero Trust within the next 12 months?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "63%",
+          "text_ar": "63%"
+        },
+        {
+          "letter": "B",
+          "text": "72%",
+          "text_ar": "72%"
+        },
+        {
+          "letter": "C",
+          "text": "81%",
+          "text_ar": "81%"
+        },
+        {
+          "letter": "D",
+          "text": "96%",
+          "text_ar": "96%"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "81%",
+      "explanation": "81% of organisations plan to implement Zero Trust strategies within the next 12 months, according to a 2025 report.",
+      "question_ar": "ما هي النسبة المئوية للمؤسسات التي تخطط لتطبيق الثقة المعدومة خلال الـ 12 شهرًا القادمة؟",
+      "correct_text_ar": "81%",
+      "explanation_ar": "تخطط 81% من المؤسسات لتنفيذ استراتيجيات الثقة المعدومة خلال الـ 12 شهرًا القادمة، وفقًا لتقرير عام 2025."
+    },
+    {
+      "id": 15,
+      "category": "Zero Trust",
+      "question": "Which Zero Trust principle ensures users receive only the minimum permissions needed?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Micro-Segmentation",
+          "text_ar": "التجزئة الدقيقة"
+        },
+        {
+          "letter": "B",
+          "text": "Phishing-Resistant MFA",
+          "text_ar": "المصادقة متعددة العوامل (MFA) المقاومة للتصيد الاحتيالي"
+        },
+        {
+          "letter": "C",
+          "text": "Continuous Authentication",
+          "text_ar": "المصادقة المستمرة"
+        },
+        {
+          "letter": "D",
+          "text": "Least Privilege Access",
+          "text_ar": "أقل امتياز الوصول"
+        }
+      ],
+      "correct_letter": "D",
+      "correct_text": "Least Privilege Access",
+      "explanation": "Least Privilege Access ensures users get only the minimum permissions required for their role, limiting damage from compromised accounts.",
+      "question_ar": "ما هو مبدأ الثقة المعدومة الذي يضمن حصول المستخدمين على الحد الأدنى من الأذونات المطلوبة فقط؟",
+      "correct_text_ar": "أقل امتياز الوصول",
+      "explanation_ar": "يضمن الوصول الأقل امتيازًا حصول المستخدمين على الحد الأدنى من الأذونات المطلوبة لدورهم فقط، مما يحد من الضرر الناتج عن الحسابات المخترقة."
+    },
+    {
+      "id": 16,
+      "category": "Zero Trust",
+      "question": "What does Micro-Segmentation achieve in a Zero Trust model?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Encrypts all traffic between servers",
+          "text_ar": "تشفير كل حركة المرور بين الخوادم"
+        },
+        {
+          "letter": "B",
+          "text": "Monitors user behaviour in real time",
+          "text_ar": "يراقب سلوك المستخدم في الوقت الحقيقي"
+        },
+        {
+          "letter": "C",
+          "text": "Isolates network segments to contain breaches",
+          "text_ar": "عزل قطاعات الشبكة لاحتواء الخروقات"
+        },
+        {
+          "letter": "D",
+          "text": "Applies biometric authentication to all users",
+          "text_ar": "يطبق المصادقة البيومترية على جميع المستخدمين"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Isolates network segments to contain breaches",
+      "explanation": "Micro-Segmentation isolates network segments so that if one is compromised, the breach cannot easily spread to other parts of the network.",
+      "question_ar": "ما الذي يحققه التجزئة الجزئية في نموذج الثقة المعدومة؟",
+      "correct_text_ar": "عزل قطاعات الشبكة لاحتواء الخروقات",
+      "explanation_ar": "تعمل تقنية التجزئة الدقيقة على عزل أجزاء الشبكة بحيث لا ينتشر الاختراق بسهولة إلى أجزاء أخرى من الشبكة في حالة تعرض أحدها للاختراق."
+    },
+    {
+      "id": 17,
+      "category": "Zero Trust",
+      "question": "Which authentication method is considered 'phishing-resistant' in the Zero Trust framework?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Email OTP codes",
+          "text_ar": "البريد الإلكتروني رموز OTP"
+        },
+        {
+          "letter": "B",
+          "text": "SMS-based 2FA",
+          "text_ar": "2FA القائم على الرسائل القصيرة"
+        },
+        {
+          "letter": "C",
+          "text": "Passkeys and biometric authentication",
+          "text_ar": "مفاتيح المرور والمصادقة البيومترية"
+        },
+        {
+          "letter": "D",
+          "text": "Security questions",
+          "text_ar": "أسئلة أمنية"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Passkeys and biometric authentication",
+      "explanation": "Passkeys and biometric authentication are phishing-resistant MFA methods because they cannot be intercepted or replicated via social engineering.",
+      "question_ar": "ما هي طريقة المصادقة التي تعتبر \"مقاومة للتصيد الاحتيالي\" في إطار عمل Zero Trust؟",
+      "correct_text_ar": "مفاتيح المرور والمصادقة البيومترية",
+      "explanation_ar": "تعد مفاتيح المرور والمصادقة البيومترية من أساليب MFA المقاومة للتصيد الاحتيالي لأنه لا يمكن اعتراضها أو تكرارها عبر الهندسة الاجتماعية."
+    },
+    {
+      "id": 18,
+      "category": "Zero Trust",
+      "question": "What does Continuous Authentication mean in a Zero Trust database environment?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Requiring a new login after every query",
+          "text_ar": "يتطلب تسجيل دخول جديد بعد كل استعلام"
+        },
+        {
+          "letter": "B",
+          "text": "Verifying identity at login only",
+          "text_ar": "التحقق من الهوية عند تسجيل الدخول فقط"
+        },
+        {
+          "letter": "C",
+          "text": "Validating identity throughout the entire session",
+          "text_ar": "التحقق من الهوية طوال الجلسة بأكملها"
+        },
+        {
+          "letter": "D",
+          "text": "Sending OTP codes every 10 minutes",
+          "text_ar": "إرسال رموز OTP كل 10 دقائق"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Validating identity throughout the entire session",
+      "explanation": "Continuous Authentication means identity is verified throughout the session — not just at login — ensuring the legitimate user remains in control.",
+      "question_ar": "ماذا تعني المصادقة المستمرة في بيئة قاعدة بيانات Zero Trust؟",
+      "correct_text_ar": "التحقق من الهوية طوال الجلسة بأكملها",
+      "explanation_ar": "المصادقة المستمرة تعني أنه يتم التحقق من الهوية طوال الجلسة - وليس فقط عند تسجيل الدخول - مما يضمن بقاء المستخدم الشرعي مسيطرًا."
+    },
+    {
+      "id": 19,
+      "category": "Quantum Security",
+      "question": "Why is quantum computing a threat to current database encryption?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It causes hardware overheating",
+          "text_ar": "يسبب ارتفاع درجة حرارة الأجهزة"
+        },
+        {
+          "letter": "B",
+          "text": "It can break public-key encryption standards almost instantly",
+          "text_ar": "يمكنه كسر معايير تشفير المفتاح العام على الفور تقريبًا"
+        },
+        {
+          "letter": "C",
+          "text": "It disrupts internet routing protocols",
+          "text_ar": "إنه يعطل بروتوكولات توجيه الإنترنت"
+        },
+        {
+          "letter": "D",
+          "text": "It floods systems with fake authentication requests",
+          "text_ar": "إنه يغمر الأنظمة بطلبات مصادقة مزيفة"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "It can break public-key encryption standards almost instantly",
+      "explanation": "Quantum computers could eventually break today's public-key encryption almost instantly, rendering RSA and ECC-based systems vulnerable.",
+      "question_ar": "لماذا تشكل الحوسبة الكمومية تهديدًا لتشفير قاعدة البيانات الحالية؟",
+      "correct_text_ar": "يمكنه كسر معايير تشفير المفتاح العام على الفور تقريبًا",
+      "explanation_ar": "يمكن لأجهزة الكمبيوتر الكمومية في نهاية المطاف كسر تشفير المفتاح العام الحالي على الفور تقريبًا، مما يجعل الأنظمة المستندة إلى RSA وECC عرضة للخطر."
+    },
+    {
+      "id": 20,
+      "category": "Quantum Security",
+      "question": "What is the 'harvest now, decrypt later' strategy used by adversaries?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Stealing encryption keys during a breach",
+          "text_ar": "سرقة مفاتيح التشفير أثناء الاختراق"
+        },
+        {
+          "letter": "B",
+          "text": "Collecting encrypted data today to decrypt once quantum computing matures",
+          "text_ar": "جمع البيانات المشفرة اليوم لفك تشفيرها بمجرد نضوج الحوسبة الكمومية"
+        },
+        {
+          "letter": "C",
+          "text": "Gradually breaking encryption over years using botnets",
+          "text_ar": "كسر التشفير تدريجيًا على مدار سنوات باستخدام شبكات الروبوت"
+        },
+        {
+          "letter": "D",
+          "text": "Harvesting biometric data for future authentication attacks",
+          "text_ar": "حصاد البيانات البيومترية لهجمات المصادقة المستقبلية"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Collecting encrypted data today to decrypt once quantum computing matures",
+      "explanation": "Adversaries collect encrypted data today knowing they cannot currently decrypt it, planning to use future quantum computers to break the encryption later.",
+      "question_ar": "ما هي استراتيجية \"الحصاد الآن، وفك التشفير لاحقًا\" التي يستخدمها الخصوم؟",
+      "correct_text_ar": "جمع البيانات المشفرة اليوم لفك تشفيرها بمجرد نضوج الحوسبة الكمومية",
+      "explanation_ar": "يقوم الخصوم بجمع البيانات المشفرة اليوم وهم يعلمون أنهم لا يستطيعون فك تشفيرها حاليًا، ويخططون لاستخدام أجهزة الكمبيوتر الكمومية المستقبلية لكسر التشفير لاحقًا."
+    },
+    {
+      "id": 21,
+      "category": "Quantum Security",
+      "question": "What percentage of global organisations plan to migrate to post-quantum cryptography within five years?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "41%",
+          "text_ar": "41%"
+        },
+        {
+          "letter": "B",
+          "text": "51%",
+          "text_ar": "51%"
+        },
+        {
+          "letter": "C",
+          "text": "61%",
+          "text_ar": "61%"
+        },
+        {
+          "letter": "D",
+          "text": "71%",
+          "text_ar": "71%"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "61%",
+      "explanation": "61% of global organisations plan to migrate to post-quantum cryptography (PQC) within five years, according to a 2024 Entrust study.",
+      "question_ar": "ما هي النسبة المئوية للمنظمات العالمية التي تخطط للانتقال إلى التشفير ما بعد الكمي في غضون خمس سنوات؟",
+      "correct_text_ar": "61%",
+      "explanation_ar": "تخطط 61% من المؤسسات العالمية للانتقال إلى التشفير ما بعد الكمي (PQC) في غضون خمس سنوات، وفقًا لدراسة أجرتها مؤسسة Entrust عام 2024."
+    },
+    {
+      "id": 22,
+      "category": "Quantum Security",
+      "question": "Which body is responsible for finalising approved quantum-resistant algorithms?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "IEEE",
+          "text_ar": "IEEE"
+        },
+        {
+          "letter": "B",
+          "text": "ISO",
+          "text_ar": "ايزو"
+        },
+        {
+          "letter": "C",
+          "text": "NIST",
+          "text_ar": "نيست"
+        },
+        {
+          "letter": "D",
+          "text": "IETF",
+          "text_ar": "IETF"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "NIST",
+      "explanation": "NIST (National Institute of Standards and Technology) is finalising the approved post-quantum cryptographic algorithms organisations should adopt.",
+      "question_ar": "ما هي الهيئة المسؤولة عن وضع اللمسات الأخيرة على الخوارزميات المقاومة للكم المعتمدة؟",
+      "correct_text_ar": "نيست",
+      "explanation_ar": "يقوم NIST (المعهد الوطني للمعايير والتكنولوجيا) بوضع اللمسات الأخيرة على خوارزميات التشفير ما بعد الكم المعتمدة التي يجب على المنظمات اعتمادها."
+    },
+    {
+      "id": 23,
+      "category": "Blockchain",
+      "question": "How does blockchain improve database security through 'data immutability'?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It prevents all read access to the database",
+          "text_ar": "يمنع كافة الوصول للقراءة إلى قاعدة البيانات"
+        },
+        {
+          "letter": "B",
+          "text": "It encrypts all data with a rotating key",
+          "text_ar": "يقوم بتشفير جميع البيانات باستخدام مفتاح دوار"
+        },
+        {
+          "letter": "C",
+          "text": "Recorded data cannot be altered or deleted",
+          "text_ar": "لا يمكن تغيير أو حذف البيانات المسجلة"
+        },
+        {
+          "letter": "D",
+          "text": "It requires biometric sign-off on every transaction",
+          "text_ar": "يتطلب تسجيل الخروج البيومتري على كل معاملة"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Recorded data cannot be altered or deleted",
+      "explanation": "Blockchain's immutability means once data is recorded it cannot be altered or deleted, providing a tamper-proof audit trail.",
+      "question_ar": "كيف تعمل تقنية blockchain على تحسين أمان قاعدة البيانات من خلال \"ثبات البيانات\"؟",
+      "correct_text_ar": "لا يمكن تغيير أو حذف البيانات المسجلة",
+      "explanation_ar": "تعني ثبات Blockchain أنه بمجرد تسجيل البيانات، لا يمكن تغييرها أو حذفها، مما يوفر مسار تدقيق مقاوم للتلاعب."
+    },
+    {
+      "id": 24,
+      "category": "Blockchain",
+      "question": "What security advantage does blockchain's decentralisation provide?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Faster query processing speed",
+          "text_ar": "سرعة معالجة الاستعلام أسرع"
+        },
+        {
+          "letter": "B",
+          "text": "Eliminates single points of failure",
+          "text_ar": "يزيل نقاط الفشل الفردية"
+        },
+        {
+          "letter": "C",
+          "text": "Allows anonymous transactions",
+          "text_ar": "يسمح بالمعاملات المجهولة"
+        },
+        {
+          "letter": "D",
+          "text": "Reduces storage costs",
+          "text_ar": "يقلل من تكاليف التخزين"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Eliminates single points of failure",
+      "explanation": "Decentralised architecture eliminates single points of failure — compromising one node does not compromise the entire database record.",
+      "question_ar": "ما هي الميزة الأمنية التي توفرها لامركزية blockchain؟",
+      "correct_text_ar": "يزيل نقاط الفشل الفردية",
+      "explanation_ar": "تعمل البنية اللامركزية على التخلص من نقاط الفشل الفردية - حيث إن المساس بعقدة واحدة لا يؤدي إلى المساس بسجل قاعدة البيانات بالكامل."
+    },
+    {
+      "id": 25,
+      "category": "Blockchain",
+      "question": "Which blockchain property is most useful for maintaining compliance audit trails?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Mining difficulty",
+          "text_ar": "صعوبة التعدين"
+        },
+        {
+          "letter": "B",
+          "text": "Token issuance",
+          "text_ar": "إصدار الرمز المميز"
+        },
+        {
+          "letter": "C",
+          "text": "Secure and transparent audit trails",
+          "text_ar": "مسارات تدقيق آمنة وشفافة"
+        },
+        {
+          "letter": "D",
+          "text": "Smart contract execution",
+          "text_ar": "تنفيذ العقود الذكية"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Secure and transparent audit trails",
+      "explanation": "Blockchain provides secure, transparent, and verifiable records of all database transactions — critical for compliance and forensic investigation.",
+      "question_ar": "ما هي خاصية blockchain الأكثر فائدة للحفاظ على مسارات تدقيق الامتثال؟",
+      "correct_text_ar": "مسارات تدقيق آمنة وشفافة",
+      "explanation_ar": "توفر تقنية Blockchain سجلات آمنة وشفافة ويمكن التحقق منها لجميع معاملات قاعدة البيانات - وهي ضرورية للامتثال والتحقيق الجنائي."
+    },
+    {
+      "id": 26,
+      "category": "Data Masking",
+      "question": "What does dynamic data masking do at the point of access?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Permanently deletes sensitive fields from the database",
+          "text_ar": "حذف الحقول الحساسة من قاعدة البيانات بشكل دائم"
+        },
+        {
+          "letter": "B",
+          "text": "Replaces sensitive data with obfuscated or pseudonymised values",
+          "text_ar": "يستبدل البيانات الحساسة بقيم مبهمة أو مستعارة"
+        },
+        {
+          "letter": "C",
+          "text": "Encrypts entire database tables at rest",
+          "text_ar": "تشفير جداول قاعدة البيانات بأكملها أثناء الراحة"
+        },
+        {
+          "letter": "D",
+          "text": "Backs up data to an isolated environment",
+          "text_ar": "نسخ البيانات احتياطيًا إلى بيئة معزولة"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Replaces sensitive data with obfuscated or pseudonymised values",
+      "explanation": "Dynamic data masking replaces sensitive data with obfuscated or pseudonymised values at the point of access so unauthorised users never see real data.",
+      "question_ar": "ماذا يفعل إخفاء البيانات الديناميكي عند نقطة الوصول؟",
+      "correct_text_ar": "يستبدل البيانات الحساسة بقيم مبهمة أو مستعارة",
+      "explanation_ar": "يستبدل إخفاء البيانات الديناميكية البيانات الحساسة بقيم مبهمة أو ذات أسماء مستعارة عند نقطة الوصول حتى لا يتمكن المستخدمون غير المصرح لهم من رؤية البيانات الحقيقية أبدًا."
+    },
+    {
+      "id": 27,
+      "category": "Data Masking",
+      "question": "Which regulations make dynamic data masking particularly critical for compliance?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "HIPAA, SOX, and PCI-DSS only",
+          "text_ar": "HIPAA وSOX وPCI-DSS فقط"
+        },
+        {
+          "letter": "B",
+          "text": "GDPR, HIPAA, and CCPA",
+          "text_ar": "اللائحة العامة لحماية البيانات (GDPR)، وHIPAA، وCCPA"
+        },
+        {
+          "letter": "C",
+          "text": "ISO 27001, NIST, and FISMA",
+          "text_ar": "ISO 27001، NIST، وFISMA"
+        },
+        {
+          "letter": "D",
+          "text": "FERPA, COPPA, and GLBA",
+          "text_ar": "FERPA، COPPA، وGLBA"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "GDPR, HIPAA, and CCPA",
+      "explanation": "Dynamic data masking is critical for GDPR, HIPAA, and CCPA compliance, ensuring sensitive personal and health data is never exposed to unauthorised users.",
+      "question_ar": "ما هي اللوائح التي تجعل إخفاء البيانات الديناميكية أمرًا بالغ الأهمية بشكل خاص للامتثال؟",
+      "correct_text_ar": "اللائحة العامة لحماية البيانات (GDPR)، وHIPAA، وCCPA",
+      "explanation_ar": "يعد إخفاء البيانات الديناميكي أمرًا بالغ الأهمية للامتثال للقانون العام لحماية البيانات (GDPR) وHIPAA وCCPA، مما يضمن عدم كشف البيانات الشخصية والصحية الحساسة أبدًا لمستخدمين غير مصرح لهم."
+    },
+    {
+      "id": 28,
+      "category": "Cloud Security",
+      "question": "What is the primary function of Cloud Security Posture Management (CSPM)?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Encrypts cloud traffic between regions",
+          "text_ar": "تشفير حركة المرور السحابية بين المناطق"
+        },
+        {
+          "letter": "B",
+          "text": "Continuously monitors and remediates cloud misconfigurations in real time",
+          "text_ar": "يراقب باستمرار ويعالج التكوينات السحابية الخاطئة في الوقت الحقيقي"
+        },
+        {
+          "letter": "C",
+          "text": "Backs up cloud databases automatically",
+          "text_ar": "يقوم بعمل نسخة احتياطية من قواعد البيانات السحابية تلقائيا"
+        },
+        {
+          "letter": "D",
+          "text": "Provides identity verification for cloud users",
+          "text_ar": "يوفر التحقق من الهوية لمستخدمي السحابة"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Continuously monitors and remediates cloud misconfigurations in real time",
+      "explanation": "CSPM continuously monitors cloud infrastructure to identify and remediate security risks and misconfigurations before they lead to a breach.",
+      "question_ar": "ما هي الوظيفة الأساسية لإدارة الوضع الأمني ​​السحابي (CSPM)؟",
+      "correct_text_ar": "يراقب باستمرار ويعالج التكوينات السحابية الخاطئة في الوقت الحقيقي",
+      "explanation_ar": "يقوم CSPM باستمرار بمراقبة البنية التحتية السحابية لتحديد ومعالجة المخاطر الأمنية والتكوينات الخاطئة قبل أن تؤدي إلى الاختراق."
+    },
+    {
+      "id": 29,
+      "category": "Cloud Security",
+      "question": "What key advantage does CSPM provide in multi-cloud environments?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It reduces cloud licensing fees",
+          "text_ar": "أنه يقلل من رسوم الترخيص السحابية"
+        },
+        {
+          "letter": "B",
+          "text": "It consolidates all databases into one region",
+          "text_ar": "فهو يجمع جميع قواعد البيانات في منطقة واحدة"
+        },
+        {
+          "letter": "C",
+          "text": "It automatically detects security gaps across all cloud providers",
+          "text_ar": "فهو يكتشف تلقائيًا الثغرات الأمنية عبر جميع موفري الخدمات السحابية"
+        },
+        {
+          "letter": "D",
+          "text": "It disables unsecured APIs immediately",
+          "text_ar": "يقوم بتعطيل واجهات برمجة التطبيقات غير الآمنة على الفور"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "It automatically detects security gaps across all cloud providers",
+      "explanation": "CSPM ensures security gaps across complex multi-cloud environments are detected automatically rather than discovered after a breach occurs.",
+      "question_ar": "ما هي الميزة الرئيسية التي يوفرها CSPM في البيئات السحابية المتعددة؟",
+      "correct_text_ar": "فهو يكتشف تلقائيًا الثغرات الأمنية عبر جميع موفري الخدمات السحابية",
+      "explanation_ar": "يضمن CSPM اكتشاف الثغرات الأمنية عبر البيئات السحابية المعقدة تلقائيًا بدلاً من اكتشافها بعد حدوث الاختراق."
+    },
+    {
+      "id": 30,
+      "category": "Action Plan",
+      "question": "Which of the following is NOT one of the 6 recommended steps in the 2025 Database Security Action Plan?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Deploy AI-powered anomaly detection",
+          "text_ar": "نشر الكشف عن الحالات الشاذة المدعوم بالذكاء الاصطناعي"
+        },
+        {
+          "letter": "B",
+          "text": "Implement Zero Trust with least-privilege access",
+          "text_ar": "تنفيذ الثقة المعدومة مع الوصول الأقل امتيازًا"
+        },
+        {
+          "letter": "C",
+          "text": "Replace all cloud databases with on-premise systems",
+          "text_ar": "استبدال كافة قواعد البيانات السحابية بأنظمة محلية"
+        },
+        {
+          "letter": "D",
+          "text": "Invest in continuous team training",
+          "text_ar": "الاستثمار في التدريب المستمر للفريق"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "Replace all cloud databases with on-premise systems",
+      "explanation": "The 6 steps include AI detection, Zero Trust, quantum-readiness, blockchain evaluation, dynamic data masking, and team training. Replacing cloud with on-premise is not recommended",
+      "question_ar": "أي مما يلي ليس من الخطوات الست الموصى بها في خطة عمل أمان قاعدة البيانات لعام 2025؟",
+      "correct_text_ar": "استبدال كافة قواعد البيانات السحابية بأنظمة محلية",
+      "explanation_ar": "تتضمن الخطوات الست اكتشاف الذكاء الاصطناعي، والثقة المعدومة، والاستعداد الكمي، وتقييم blockchain، وإخفاء البيانات الديناميكية، وتدريب الفريق. لا يوصى باستبدال السحابة بأخرى محلية"
+    }
+  ]
+}

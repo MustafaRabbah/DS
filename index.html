@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MCQ Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222c;
+      --border: #2d3a4a;
+      --text: #e8eef4;
+      --muted: #8b9cb3;
+      --accent: #3d8bfd;
+      --accent-dim: rgba(61, 139, 253, 0.15);
+      --ok: #34c759;
+      --ok-dim: rgba(52, 199, 89, 0.12);
+      --bad: #ff453a;
+      --bad-dim: rgba(255, 69, 58, 0.12);
+      --radius: 12px;
+      --font-en: "DM Sans", system-ui, sans-serif;
+      --font-ar: "Noto Sans Arabic", "DM Sans", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-en);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 3rem;
+    }
+
+    header {
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    header .sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    select, button:not(.opt) {
+      font-family: inherit;
+      font-size: 0.875rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 0.45rem 0.65rem;
+      cursor: pointer;
+    }
+
+    button:not(.opt):hover {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    button:not(.opt):disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .seg {
+      display: inline-flex;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .seg button {
+      border: none;
+      border-radius: 0;
+      margin: 0;
+      background: var(--surface);
+    }
+
+    .seg button.active {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .seg button + button {
+      border-left: 1px solid var(--border);
+    }
+
+    .progress {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-left: auto;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+
+    .q-block {
+      margin-bottom: 1rem;
+    }
+
+    .q-block .label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+    }
+
+    .q-block p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .q-block.ar {
+      direction: rtl;
+      font-family: var(--font-ar);
+      text-align: right;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .opt {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      text-align: left;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      cursor: pointer;
+      line-height: 1.4;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .opt .letter {
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .opt:hover:not(:disabled) {
+      border-color: var(--accent);
+    }
+
+    .opt.selected {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    .opt.correct {
+      border-color: var(--ok);
+      background: var(--ok-dim);
+    }
+
+    .opt.wrong {
+      border-color: var(--bad);
+      background: var(--bad-dim);
+    }
+
+    .opt.ar {
+      direction: rtl;
+      font-family: var(--font-ar);
+      text-align: right;
+      flex-direction: row-reverse;
+    }
+
+    .opt .txt {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .biling .ar-line {
+      display: block;
+      font-family: var(--font-ar);
+    }
+
+    .biling .en-line {
+      display: block;
+      font-size: 0.85em;
+      color: var(--muted);
+      margin-top: 0.35em;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .reveal-wrap {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .reveal-wrap.hidden {
+      display: none;
+    }
+
+    .answer-line {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .answer-line strong {
+      color: var(--ok);
+    }
+
+    .explain {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .explain.ar {
+      direction: rtl;
+      font-family: var(--font-ar);
+      text-align: right;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: space-between;
+      margin-top: 1.25rem;
+    }
+
+    .err {
+      color: var(--bad);
+      font-size: 0.9rem;
+      padding: 1rem;
+      background: var(--bad-dim);
+      border-radius: var(--radius);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 id="pageTitle">MCQ Practice</h1>
+      <p class="sub" id="pageSub"></p>
+    </header>
+
+    <div id="loadErr" class="err" hidden></div>
+
+    <div id="app" hidden>
+      <div class="toolbar">
+        <label>
+          <span class="visually-hidden" data-ui="categoryLabel">Category</span>
+          <select id="category" aria-label="Filter by category"></select>
+        </label>
+        <div class="seg" role="group" aria-label="Display language">
+          <button type="button" data-mode="both" class="active" data-ui="modeBoth">EN + عربي</button>
+          <button type="button" data-mode="en" data-ui="modeEn">English</button>
+          <button type="button" data-mode="ar" data-ui="modeAr">العربية</button>
+        </div>
+        <span class="progress" id="progress"></span>
+      </div>
+
+      <article class="card" id="card"></article>
+
+      <div class="nav-row">
+        <button type="button" id="prev" data-ui="prev">← Previous</button>
+        <button type="button" id="toggleAns" data-ui="showAnswer">Show answer</button>
+        <button type="button" id="next" data-ui="next">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const UI_STR = {
+      en: {
+        categoryLabel: "Category",
+        allCategories: "All categories",
+        modeBoth: "EN + عربي",
+        modeEn: "English",
+        modeAr: "العربية",
+        prev: "← Previous",
+        next: "Next →",
+        showAnswer: "Show answer",
+        hideAnswer: "Hide answer",
+        correctPrefix: "Correct:",
+        progress: (i, n) => `Question ${i} / ${n}`,
+        loadErr: "Could not load mcqs.json. For local preview, serve this folder (e.g. python -m http.server).",
+      },
+      ar: {
+        categoryLabel: "التصنيف",
+        allCategories: "كل الأقسام",
+        modeBoth: "إنجليزي + عربي",
+        modeEn: "English",
+        modeAr: "العربية",
+        prev: "→ السابق",
+        next: "التالي ←",
+        showAnswer: "إظهار الإجابة",
+        hideAnswer: "إخفاء الإجابة",
+        correctPrefix: "الصحيح:",
+        progress: (i, n) => `السؤال ${i} من ${n}`,
+        loadErr: "تعذر تحميل mcqs.json. للمعاينة محليًا شغّل خادمًا ثابتًا (مثل python -m http.server).",
+      },
+    };
+
+    let uiLang = "en";
+    let displayMode = "both";
+    let data = null;
+    let filtered = [];
+    let index = 0;
+    let selectedLetter = null;
+    let showAnswer = false;
+
+    function t(key) {
+      const table = UI_STR[uiLang];
+      const v = table[key];
+      if (typeof v === "function") return v;
+      return v ?? UI_STR.en[key];
+    }
+
+    function applyUiStrings() {
+      document.querySelectorAll("[data-ui]").forEach((el) => {
+        const key = el.getAttribute("data-ui");
+        if (key === "categoryLabel") return;
+        const val = UI_STR.en[key] ? (uiLang === "ar" && UI_STR.ar[key] ? UI_STR.ar[key] : UI_STR.en[key]) : null;
+        if (val) el.textContent = val;
+      });
+      const cat = document.getElementById("category");
+      if (cat.options.length && cat.options[0]) {
+        cat.options[0].text = t("allCategories");
+      }
+      updateProgressText();
+      updateToggleAnswerBtn();
+    }
+
+    function stripDash(s) {
+      return (s || "").replace(/^-\s+/, "").trim();
+    }
+
+    function setMode(mode) {
+      displayMode = mode;
+      document.querySelectorAll(".seg button").forEach((b) => {
+        b.classList.toggle("active", b.getAttribute("data-mode") === mode);
+      });
+      renderCard();
+    }
+
+    function setUiLang(lang) {
+      uiLang = lang;
+      document.documentElement.lang = lang === "ar" ? "ar" : "en";
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      applyUiStrings();
+      renderCard();
+    }
+
+    function categories(list) {
+      const s = new Set();
+      list.forEach((q) => s.add(q.category));
+      return [...s].sort();
+    }
+
+    function applyFilter() {
+      const cat = document.getElementById("category").value;
+      filtered = cat ? data.questions.filter((q) => q.category === cat) : [...data.questions];
+      index = Math.min(index, Math.max(0, filtered.length - 1));
+      renderCard();
+      updateProgressText();
+    }
+
+    function updateProgressText() {
+      const el = document.getElementById("progress");
+      if (!filtered.length) {
+        el.textContent = "";
+        return;
+      }
+      const fn = UI_STR[uiLang].progress || UI_STR.en.progress;
+      el.textContent = fn(index + 1, filtered.length);
+    }
+
+    function updateToggleAnswerBtn() {
+      const btn = document.getElementById("toggleAns");
+      btn.textContent = showAnswer ? t("hideAnswer") : t("showAnswer");
+    }
+
+    function renderCard() {
+      const card = document.getElementById("card");
+      if (!filtered.length) {
+        card.innerHTML = "<p>No questions.</p>";
+        return;
+      }
+      const q = filtered[index];
+      const showEn = displayMode !== "ar";
+      const showAr = displayMode !== "en" && q.question_ar;
+
+      let html = `<div class="badge">${escapeHtml(q.category)}</div>`;
+
+      if (showEn) {
+        html += `<div class="q-block"><div class="label">English</div><p>${escapeHtml(q.question)}</p></div>`;
+      }
+      if (showAr && q.question_ar) {
+        html += `<div class="q-block ar"><div class="label">العربية</div><p>${escapeHtml(stripDash(q.question_ar))}</p></div>`;
+      } else if (displayMode === "ar" && !q.question_ar) {
+        html += `<div class="q-block ar"><div class="label">العربية</div><p>${escapeHtml(q.question)}</p></div>`;
+      }
+
+      html += `<div class="options">`;
+      q.options.forEach((opt) => {
+        const isSel = selectedLetter === opt.letter;
+        let cls = "opt";
+        if (displayMode === "ar") cls += " ar";
+        if (isSel) cls += " selected";
+        if (showAnswer) {
+          if (opt.letter === q.correct_letter) cls += " correct";
+          else if (isSel) cls += " wrong";
+        }
+
+        let labelHtml;
+        if (displayMode === "en") {
+          labelHtml = escapeHtml(opt.text);
+        } else if (displayMode === "ar") {
+          const txt = opt.text_ar ? stripDash(opt.text_ar) : opt.text;
+          labelHtml = escapeHtml(txt);
+        } else {
+          if (opt.text_ar) {
+            labelHtml =
+              `<span class="biling">` +
+              `<span dir="rtl" class="ar-line">${escapeHtml(stripDash(opt.text_ar))}</span>` +
+              `<span dir="ltr" class="en-line">${escapeHtml(opt.text)}</span>` +
+              `</span>`;
+          } else {
+            labelHtml = escapeHtml(opt.text);
+          }
+        }
+
+        html += `<button type="button" class="${cls}" data-letter="${opt.letter}" ${showAnswer ? "disabled" : ""}>
+          <span class="letter">${opt.letter}</span>
+          <span class="txt">${labelHtml}</span>
+        </button>`;
+      });
+      html += `</div>`;
+
+      html += `<div class="reveal-wrap ${showAnswer ? "" : "hidden"}" id="reveal">`;
+      const corrEn = q.correct_text;
+      const corrAr = q.correct_text_ar ? stripDash(q.correct_text_ar) : "";
+
+      if (displayMode === "both" && corrAr) {
+        html += `<div class="answer-line"><strong>${escapeHtml(UI_STR.en.correctPrefix)}</strong> ${escapeHtml(corrEn)}</div>`;
+        html += `<div class="answer-line ar" dir="rtl" style="font-family:var(--font-ar)"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
+      } else if (displayMode === "ar" && corrAr) {
+        html += `<div class="answer-line ar" dir="rtl" style="font-family:var(--font-ar)"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
+      } else {
+        html += `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${escapeHtml(corrEn)}</div>`;
+      }
+
+      const exEn = q.explanation;
+      const exAr = q.explanation_ar ? stripDash(q.explanation_ar) : "";
+
+      if (displayMode === "en") {
+        html += `<p class="explain">${escapeHtml(exEn)}</p>`;
+      } else if (displayMode === "ar") {
+        if (exAr) html += `<p class="explain ar">${escapeHtml(exAr)}</p>`;
+        else html += `<p class="explain ar">${escapeHtml(exEn)}</p>`;
+      } else {
+        html += `<p class="explain">${escapeHtml(exEn)}</p>`;
+        if (exAr) html += `<p class="explain ar">${escapeHtml(exAr)}</p>`;
+      }
+      html += `</div>`;
+
+      card.innerHTML = html;
+
+      card.querySelectorAll(".opt:not([disabled])").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          selectedLetter = btn.getAttribute("data-letter");
+          renderCard();
+        });
+      });
+    }
+
+    function escapeHtml(s) {
+      if (!s) return "";
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function initCategories() {
+      const sel = document.getElementById("category");
+      sel.innerHTML = "";
+      const all = document.createElement("option");
+      all.value = "";
+      all.textContent = t("allCategories");
+      sel.appendChild(all);
+      categories(data.questions).forEach((c) => {
+        const o = document.createElement("option");
+        o.value = c;
+        o.textContent = c;
+        sel.appendChild(o);
+      });
+    }
+
+    async function main() {
+      try {
+        const res = await fetch("mcqs.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(String(res.status));
+        data = await res.json();
+      } catch (e) {
+        document.getElementById("loadErr").hidden = false;
+        document.getElementById("loadErr").textContent = t("loadErr");
+        return;
+      }
+
+      document.getElementById("pageTitle").textContent = data.title || "MCQ Practice";
+      document.getElementById("pageSub").textContent = `${data.questions.length} questions`;
+
+      initCategories();
+      filtered = [...data.questions];
+      document.getElementById("app").hidden = false;
+
+      document.getElementById("category").addEventListener("change", () => {
+        index = 0;
+        selectedLetter = null;
+        showAnswer = false;
+        applyFilter();
+        updateToggleAnswerBtn();
+      });
+
+      document.querySelectorAll(".seg button").forEach((b) => {
+        b.addEventListener("click", () => setMode(b.getAttribute("data-mode")));
+      });
+
+      document.getElementById("prev").addEventListener("click", () => {
+        if (index > 0) {
+          index--;
+          selectedLetter = null;
+          showAnswer = false;
+          renderCard();
+          updateToggleAnswerBtn();
+          updateProgressText();
+        }
+      });
+
+      document.getElementById("next").addEventListener("click", () => {
+        if (index < filtered.length - 1) {
+          index++;
+          selectedLetter = null;
+          showAnswer = false;
+          renderCard();
+          updateToggleAnswerBtn();
+          updateProgressText();
+        }
+      });
+
+      document.getElementById("toggleAns").addEventListener("click", () => {
+        showAnswer = !showAnswer;
+        updateToggleAnswerBtn();
+        renderCard();
+      });
+
+      // Double-click header to swap UI chrome language (EN ↔ AR)
+      document.querySelector("header h1").addEventListener("dblclick", () => {
+        setUiLang(uiLang === "en" ? "ar" : "en");
+      });
+
+      renderCard();
+      updateProgressText();
+      updateToggleAnswerBtn();
+    }
+
+    main();
+  </script>
+</body>
+</html>
