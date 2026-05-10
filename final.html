@@ -687,6 +687,7 @@
         loadErr: "Could not load final_mcqs.json. Serve the folder over HTTP (e.g. python -m http.server).",
         needName: "Enter and save your name first.",
         badCount: "Invalid number of questions.",
+        wrongNote: "Not quite — the correct answer:",
       },
       ar: {
         linkBank: "بنك MCQ",
@@ -741,6 +742,7 @@
         loadErr: "تعذر تحميل final_mcqs.json",
         needName: "احفظ اسمك أولاً.",
         badCount: "عدد أسئلة غير صالح.",
+        wrongNote: "ليس تمامًا — الإجابة الصحيحة:",
       },
     };
 
@@ -780,6 +782,32 @@
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
+    }
+
+    function getAnswerStore(q, isExam) {
+      return isExam ? examAnswers[q.id] : studyAnswers[q.id];
+    }
+
+    function hasAnsweredMcq(q, isExam) {
+      const a = getAnswerStore(q, isExam);
+      return a != null && a !== "";
+    }
+
+    function hasAnsweredTf(q, isExam) {
+      const a = getAnswerStore(q, isExam);
+      return a === true || a === false;
+    }
+
+    function hasAnsweredQ(q, isExam) {
+      if (q.type === "mcq") return hasAnsweredMcq(q, isExam);
+      return hasAnsweredTf(q, isExam);
+    }
+
+    function isWrongAnswer(q, isExam) {
+      if (!hasAnsweredQ(q, isExam)) return false;
+      const a = getAnswerStore(q, isExam);
+      if (q.type === "mcq") return a !== q.correct_letter;
+      return a !== q.correct_bool;
     }
 
     function shuffle(arr) {
@@ -934,11 +962,19 @@
       document.getElementById("toggleAnsStudy").textContent = studyShowAnswer ? t("hideAnswer") : t("showAnswer");
     }
 
-    function renderMcqBlock(q, mode, { exam, reveal }) {
+    function renderMcqBlock(q, mode, { exam, studyShowAnswer }) {
+      if (q.type !== "mcq") return "";
       const showEn = mode !== "ar";
-      const showAr = mode !== "en" && (q.question_ar || displayMode === "ar");
+      const showAr = mode !== "en" && (q.question_ar || mode === "ar");
+
+      const fullKey = !exam && studyShowAnswer;
+      const answered = hasAnsweredMcq(q, exam);
+      const wrong = answered && isWrongAnswer(q, exam);
+      const gradeOpts = fullKey || answered;
+      const showStrip = fullKey || wrong;
+      const optLock = (exam && answered) || fullKey;
+
       let html = "";
-      if (q.type !== "mcq") return html;
       if (showEn) {
         html += `<div class="q-block"><div class="label">English</div><p>${escapeHtml(q.question)}</p></div>`;
       }
@@ -954,7 +990,7 @@
         if (mode === "ar") cls += " ar";
         const isSel = exam ? examAnswers[q.id] === opt.letter : studySel === opt.letter;
         if (isSel) cls += " selected";
-        if (reveal) {
+        if (gradeOpts) {
           if (opt.letter === q.correct_letter) cls += " correct";
           else if (isSel) cls += " wrong";
         }
@@ -974,36 +1010,52 @@
           labelHtml = escapeHtml(opt.text);
         }
 
-        const dis = reveal ? " disabled" : "";
+        const dis = optLock ? " disabled" : "";
         const dataExam = exam ? ` data-exam="1"` : "";
         html += `<button type="button" class="${cls}" data-letter="${opt.letter}"${dataExam}${dis}>` +
           `<span class="letter">${opt.letter}</span><span class="txt">${labelHtml}</span></button>`;
       });
       html += `</div>`;
 
-      if (reveal && q.correct_text) {
+      if (showStrip) {
         const corrEn = q.correct_text;
         const corrAr = q.correct_text_ar ? stripDash(q.correct_text_ar) : "";
-        html += `<div class="reveal-wrap">`;
-        if (mode === "both" && corrAr) {
-          html += `<div class="answer-line"><strong>${escapeHtml(UI_STR.en.correctPrefix)}</strong> ${escapeHtml(corrEn)}</div>`;
-          html += `<div class="answer-line ar" dir="rtl"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
-        } else if (mode === "ar" && corrAr) {
-          html += `<div class="answer-line ar" dir="rtl"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
-        } else {
-          html += `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${escapeHtml(corrEn)}</div>`;
+        if (corrEn || corrAr) {
+          const noteWrong = wrong && !fullKey
+            ? `<p class="explain" style="color:var(--bad);margin:0 0 0.5rem">${escapeHtml(t("wrongNote"))}</p>`
+            : "";
+          html += `<div class="reveal-wrap">`;
+          html += noteWrong;
+          if (mode === "both" && corrAr) {
+            html += `<div class="answer-line"><strong>${escapeHtml(UI_STR.en.correctPrefix)}</strong> ${escapeHtml(corrEn)}</div>`;
+            html += `<div class="answer-line ar" dir="rtl"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
+          } else if (mode === "ar" && corrAr) {
+            html += `<div class="answer-line ar" dir="rtl"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
+          } else {
+            html += `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${escapeHtml(corrEn)}</div>`;
+          }
+          if (fullKey || wrong) {
+            if (q.explanation) html += `<p class="explain">${escapeHtml(q.explanation)}</p>`;
+            if (q.explanation_ar) html += `<p class="explain ar">${escapeHtml(stripDash(q.explanation_ar))}</p>`;
+          }
+          html += `</div>`;
         }
-        if (q.explanation) html += `<p class="explain">${escapeHtml(q.explanation)}</p>`;
-        if (q.explanation_ar) html += `<p class="explain ar">${escapeHtml(stripDash(q.explanation_ar))}</p>`;
-        html += `</div>`;
       }
       return html;
     }
 
-    function renderTfBlock(q, mode, { exam, reveal }) {
+    function renderTfBlock(q, mode, { exam, studyShowAnswer }) {
       if (q.type !== "true_false") return "";
       const showEn = mode !== "ar";
-      const showAr = mode !== "en" && q.statement_ar;
+      const showAr = mode !== "en" && (q.statement_ar || mode === "ar");
+
+      const fullKey = !exam && studyShowAnswer;
+      const answered = hasAnsweredTf(q, exam);
+      const wrong = answered && isWrongAnswer(q, exam);
+      const gradeOpts = fullKey || answered;
+      const showStrip = fullKey || wrong;
+      const optLock = (exam && answered) || fullKey;
+
       let stmtBlock = "";
       if (showEn) {
         stmtBlock += `<div class="q-block"><div class="label">Statement</div><p>${escapeHtml(q.statement)}</p></div>`;
@@ -1021,27 +1073,32 @@
       let clsF = "tf-btn";
       if (tSel) clsT += " selected";
       if (fSel) clsF += " selected";
-      if (reveal) {
+      if (gradeOpts) {
         if (q.correct_bool === true) clsT += " correct";
         else clsF += " correct";
         if (tSel && q.correct_bool !== true) clsT += " wrong";
         if (fSel && q.correct_bool !== false) clsF += " wrong";
       }
 
-      const dis = reveal ? " disabled" : "";
+      const dis = optLock ? " disabled" : "";
       const examAttr = exam ? ' data-tf="1"' : "";
-      let row =
+      const row =
         `<div class="tf-row">` +
         `<button type="button" class="${clsT}" data-bool="true"${examAttr}${dis}>${escapeHtml(t("trueBtn"))}</button>` +
         `<button type="button" class="${clsF}" data-bool="false"${examAttr}${dis}>${escapeHtml(t("falseBtn"))}</button>` +
         `</div>`;
 
       let tail = "";
-      if (reveal) {
+      if (showStrip) {
         const ok = q.correct_bool;
+        const okWord = ok ? t("trueBtn") : t("falseBtn");
+        const noteWrong = wrong && !fullKey
+          ? `<p class="explain" style="color:var(--bad);margin:0 0 0.5rem">${escapeHtml(t("wrongNote"))}</p>`
+          : "";
         tail =
           `<div class="reveal-wrap">` +
-          `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${ok ? "True" : "False"}</div>` +
+          noteWrong +
+          `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${escapeHtml(okWord)}</div>` +
           `</div>`;
       }
 
@@ -1067,9 +1124,9 @@
         `</div>`;
 
       if (q.type === "mcq") {
-        html += renderMcqBlock(q, mode, { exam: false, reveal });
+        html += renderMcqBlock(q, mode, { exam: false, studyShowAnswer: reveal });
       } else {
-        html += renderTfBlock(q, mode, { exam: false, reveal });
+        html += renderTfBlock(q, mode, { exam: false, studyShowAnswer: reveal });
       }
 
       card.innerHTML = html;
@@ -1091,9 +1148,9 @@
         `</div>`;
 
       if (q.type === "mcq") {
-        html += renderMcqBlock(q, mode, { exam: true, reveal: false });
+        html += renderMcqBlock(q, mode, { exam: true, studyShowAnswer: false });
       } else {
-        html += renderTfBlock(q, mode, { exam: true, reveal: false });
+        html += renderTfBlock(q, mode, { exam: true, studyShowAnswer: false });
       }
       card.innerHTML = html;
       document.getElementById("progressFillExam").style.width = `${((examIndex + 1) / examList.length) * 100}%`;

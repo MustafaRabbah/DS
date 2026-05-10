@@ -9,24 +9,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "It uses 128-bit keys"
+          "text": "It uses 128-bit keys",
+          "text_ar": "ويستخدم مفاتيح 128 بت"
         },
         {
           "letter": "B",
-          "text": "It is vulnerable to brute force"
+          "text": "It is vulnerable to brute force",
+          "text_ar": "إنها عرضة للقوة الغاشمة"
         },
         {
           "letter": "C",
-          "text": "It is asymmetric"
+          "text": "It is asymmetric",
+          "text_ar": "إنه غير متماثل"
         },
         {
           "letter": "D",
-          "text": "It is format-preserving"
+          "text": "It is format-preserving",
+          "text_ar": "إنه يحافظ على التنسيق"
         }
       ],
       "correct_letter": "B",
       "correct_text": "It is vulnerable to brute force",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "تعتبر DES غير آمنة للأسباب التالية:",
+      "correct_text_ar": "إنها عرضة للقوة الغاشمة"
     },
     {
       "id": "m35",
@@ -36,24 +42,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Using longer keys"
+          "text": "Using longer keys",
+          "text_ar": "استخدام مفاتيح أطول"
         },
         {
           "letter": "B",
-          "text": "Triple encryption"
+          "text": "Triple encryption",
+          "text_ar": "التشفير الثلاثي"
         },
         {
           "letter": "C",
-          "text": "Adding padding"
+          "text": "Adding padding",
+          "text_ar": "إضافة الحشو"
         },
         {
           "letter": "D",
-          "text": "Using elliptic curves"
+          "text": "Using elliptic curves",
+          "text_ar": "استخدام المنحنيات الإهليلجية"
         }
       ],
       "correct_letter": "B",
       "correct_text": "Triple encryption",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "يعمل برنامج 3DES على تحسين DES من خلال:",
+      "correct_text_ar": "التشفير الثلاثي"
     },
     {
       "id": "m36",
@@ -63,24 +75,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "10"
+          "text": "10",
+          "text_ar": "10"
         },
         {
           "letter": "B",
-          "text": "12"
+          "text": "12",
+          "text_ar": "12"
         },
         {
           "letter": "C",
-          "text": "14"
+          "text": "14",
+          "text_ar": "14"
         },
         {
           "letter": "D",
-          "text": "16"
+          "text": "16",
+          "text_ar": "16"
         }
       ],
       "correct_letter": "C",
       "correct_text": "14",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "كم عدد الجولات التي يستخدمها AES بمفتاح 256 بت؟",
+      "correct_text_ar": "14"
     },
     {
       "id": "m37",
@@ -90,24 +108,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Slow and rigid"
+          "text": "Slow and rigid",
+          "text_ar": "بطيئة وجامدة"
         },
         {
           "letter": "B",
-          "text": "Fast and flexible"
+          "text": "Fast and flexible",
+          "text_ar": "سريعة ومرنة"
         },
         {
           "letter": "C",
-          "text": "Asymmetric"
+          "text": "Asymmetric",
+          "text_ar": "غير متماثل"
         },
         {
           "letter": "D",
-          "text": "Outdated"
+          "text": "Outdated",
+          "text_ar": "عفا عليها الزمن"
         }
       ],
       "correct_letter": "B",
       "correct_text": "Fast and flexible",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "يُعرف تشفير RC5 بأنه:",
+      "correct_text_ar": "سريعة ومرنة"
     },
     {
       "id": "m38",
@@ -117,24 +141,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Key length"
+          "text": "Key length",
+          "text_ar": "طول المفتاح"
         },
         {
           "letter": "B",
-          "text": "Data format"
+          "text": "Data format",
+          "text_ar": "تنسيق البيانات"
         },
         {
           "letter": "C",
-          "text": "Cipher strength"
+          "text": "Cipher strength",
+          "text_ar": "قوة التشفير"
         },
         {
           "letter": "D",
-          "text": "Storage size"
+          "text": "Storage size",
+          "text_ar": "حجم التخزين"
         }
       ],
       "correct_letter": "B",
       "correct_text": "Data format",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "يحافظ التشفير مع الحفاظ على التنسيق (FPE) على ما يلي:",
+      "correct_text_ar": "تنسيق البيانات"
     },
     {
       "id": "m39",
@@ -144,24 +174,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "It uses longer keys"
+          "text": "It uses longer keys",
+          "text_ar": "ويستخدم مفاتيح أطول"
         },
         {
           "letter": "B",
-          "text": "It uses shorter keys"
+          "text": "It uses shorter keys",
+          "text_ar": "ويستخدم مفاتيح أقصر"
         },
         {
           "letter": "C",
-          "text": "It is symmetric"
+          "text": "It is symmetric",
+          "text_ar": "إنه متماثل"
         },
         {
           "letter": "D",
-          "text": "It is format-preserving"
+          "text": "It is format-preserving",
+          "text_ar": "إنه يحافظ على التنسيق"
         }
       ],
       "correct_letter": "B",
       "correct_text": "It uses shorter keys",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ECC أقوى من RSA للأسباب التالية:",
+      "correct_text_ar": "ويستخدم مفاتيح أقصر"
     },
     {
       "id": "m40",
@@ -171,24 +207,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Queries over encrypted data"
+          "text": "Queries over encrypted data",
+          "text_ar": "الاستعلامات حول البيانات المشفرة"
         },
         {
           "letter": "B",
-          "text": "Faster brute force"
+          "text": "Faster brute force",
+          "text_ar": "أسرع القوة الغاشمة"
         },
         {
           "letter": "C",
-          "text": "Keyless encryption"
+          "text": "Keyless encryption",
+          "text_ar": "التشفير بدون مفتاح"
         },
         {
           "letter": "D",
-          "text": "Padding removal"
+          "text": "Padding removal",
+          "text_ar": "إزالة الحشو"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Queries over encrypted data",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "يسمح التشفير القابل للبحث بما يلي:",
+      "correct_text_ar": "الاستعلامات حول البيانات المشفرة"
     },
     {
       "id": "m41",
@@ -198,24 +240,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "First line of defense"
+          "text": "First line of defense",
+          "text_ar": "خط الدفاع الأول"
         },
         {
           "letter": "B",
-          "text": "Last line of defense"
+          "text": "Last line of defense",
+          "text_ar": "خط الدفاع الأخير"
         },
         {
           "letter": "C",
-          "text": "Optional security"
+          "text": "Optional security",
+          "text_ar": "أمان اختياري"
         },
         {
           "letter": "D",
-          "text": "Performance enhancer"
+          "text": "Performance enhancer",
+          "text_ar": "محسن الأداء"
         }
       ],
       "correct_letter": "B",
       "correct_text": "Last line of defense",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "غالبًا ما يتم وصف التشفير على النحو التالي:",
+      "correct_text_ar": "خط الدفاع الأخير"
     },
     {
       "id": "m42",
@@ -225,24 +273,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Disk size"
+          "text": "Disk size",
+          "text_ar": "حجم القرص"
         },
         {
           "letter": "B",
-          "text": "Key length"
+          "text": "Key length",
+          "text_ar": "طول المفتاح"
         },
         {
           "letter": "C",
-          "text": "Padding removal"
+          "text": "Padding removal",
+          "text_ar": "إزالة الحشو"
         },
         {
           "letter": "D",
-          "text": "Cloud storage"
+          "text": "Cloud storage",
+          "text_ar": "التخزين السحابي"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Disk size",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "واجه تشفير نظام إدارة قواعد البيانات (DBMS) مشاكل في البداية مع:",
+      "correct_text_ar": "حجم القرص"
     },
     {
       "id": "m43",
@@ -252,24 +306,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Algorithm speed"
+          "text": "Algorithm speed",
+          "text_ar": "سرعة الخوارزمية"
         },
         {
           "letter": "B",
-          "text": "Key storage inside the database"
+          "text": "Key storage inside the database",
+          "text_ar": "تخزين المفاتيح داخل قاعدة البيانات"
         },
         {
           "letter": "C",
-          "text": "Lack of padding"
+          "text": "Lack of padding",
+          "text_ar": "عدم وجود حشوة"
         },
         {
           "letter": "D",
-          "text": "Cloud incompatibility"
+          "text": "Cloud incompatibility",
+          "text_ar": "عدم التوافق السحابي"
         }
       ],
       "correct_letter": "B",
       "correct_text": "Key storage inside the database",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "المشكلة الرئيسية في تشفير DBMS هي:",
+      "correct_text_ar": "تخزين المفاتيح داخل قاعدة البيانات"
     },
     {
       "id": "m44",
@@ -279,24 +339,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Added complexity"
+          "text": "Added complexity",
+          "text_ar": "وأضاف التعقيد"
         },
         {
           "letter": "B",
-          "text": "Stronger compliance"
+          "text": "Stronger compliance",
+          "text_ar": "امتثال أقوى"
         },
         {
           "letter": "C",
-          "text": "Faster performance"
+          "text": "Faster performance",
+          "text_ar": "أداء أسرع"
         },
         {
           "letter": "D",
-          "text": "Minimal changes"
+          "text": "Minimal changes",
+          "text_ar": "الحد الأدنى من التغييرات"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Added complexity",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "يتم انتقاد خوادم التشفير بسبب:",
+      "correct_text_ar": "وأضاف التعقيد"
     },
     {
       "id": "m45",
@@ -306,24 +372,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "RSA"
+          "text": "RSA",
+          "text_ar": "آر إس إيه"
         },
         {
           "letter": "B",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         },
         {
           "letter": "C",
-          "text": "AES"
+          "text": "AES",
+          "text_ar": "الخدمات المعمارية والهندسية"
         },
         {
           "letter": "D",
-          "text": "DES"
+          "text": "DES",
+          "text_ar": "ديس"
         }
       ],
       "correct_letter": "B",
       "correct_text": "ECC",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هي خوارزمية التشفير المستخدمة في التوقيعات الرقمية للبيتكوين؟",
+      "correct_text_ar": "إي سي سي"
     },
     {
       "id": "m46",
@@ -333,24 +405,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "AES"
+          "text": "AES",
+          "text_ar": "الخدمات المعمارية والهندسية"
         },
         {
           "letter": "B",
-          "text": "DES"
+          "text": "DES",
+          "text_ar": "ديس"
         },
         {
           "letter": "C",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         },
         {
           "letter": "D",
-          "text": "RC5"
+          "text": "RC5",
+          "text_ar": "RC5"
         }
       ],
       "correct_letter": "B",
       "correct_text": "DES",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هي طريقة التشفير التي تعتبر قديمة وغير آمنة اليوم؟",
+      "correct_text_ar": "ديس"
     },
     {
       "id": "m47",
@@ -360,24 +438,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "RC5"
+          "text": "RC5",
+          "text_ar": "RC5"
         },
         {
           "letter": "B",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         },
         {
           "letter": "C",
-          "text": "RSA"
+          "text": "RSA",
+          "text_ar": "آر إس إيه"
         },
         {
           "letter": "D",
-          "text": "FPE"
+          "text": "FPE",
+          "text_ar": "FPE"
         }
       ],
       "correct_letter": "A",
       "correct_text": "RC5",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هي طريقة التشفير المدعومة في Oracle وDB2؟",
+      "correct_text_ar": "RC5"
     },
     {
       "id": "m48",
@@ -387,24 +471,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "AES"
+          "text": "AES",
+          "text_ar": "الخدمات المعمارية والهندسية"
         },
         {
           "letter": "B",
-          "text": "FPE"
+          "text": "FPE",
+          "text_ar": "FPE"
         },
         {
           "letter": "C",
-          "text": "RSA"
+          "text": "RSA",
+          "text_ar": "آر إس إيه"
         },
         {
           "letter": "D",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         }
       ],
       "correct_letter": "B",
       "correct_text": "FPE",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هي طريقة التشفير المستخدمة في الأنظمة الأساسية السحابية مثل AWS وGoogle Cloud؟",
+      "correct_text_ar": "FPE"
     },
     {
       "id": "m49",
@@ -414,24 +504,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "SE"
+          "text": "SE",
+          "text_ar": "SE"
         },
         {
           "letter": "B",
-          "text": "AES"
+          "text": "AES",
+          "text_ar": "الخدمات المعمارية والهندسية"
         },
         {
           "letter": "C",
-          "text": "RC5"
+          "text": "RC5",
+          "text_ar": "RC5"
         },
         {
           "letter": "D",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         }
       ],
       "correct_letter": "A",
       "correct_text": "SE",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هي طريقة التشفير التي تسمح باستعلامات البحث عبر البيانات المشفرة؟",
+      "correct_text_ar": "SE"
     },
     {
       "id": "m50",
@@ -441,24 +537,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "ABKS"
+          "text": "ABKS",
+          "text_ar": "ايه بي كي اس"
         },
         {
           "letter": "B",
-          "text": "SSE"
+          "text": "SSE",
+          "text_ar": "SSE"
         },
         {
           "letter": "C",
-          "text": "PEKS"
+          "text": "PEKS",
+          "text_ar": "بيكس"
         },
         {
           "letter": "D",
-          "text": "RSA"
+          "text": "RSA",
+          "text_ar": "آر إس إيه"
         }
       ],
       "correct_letter": "B",
       "correct_text": "SSE",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "في التشفير القابل للبحث، يستخدم السيناريو \"المالك كقارئ/كاتب\":",
+      "correct_text_ar": "SSE"
     },
     {
       "id": "m51",
@@ -468,24 +570,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         },
         {
           "letter": "B",
-          "text": "PEKS"
+          "text": "PEKS",
+          "text_ar": "بيكس"
         },
         {
           "letter": "C",
-          "text": "AES"
+          "text": "AES",
+          "text_ar": "الخدمات المعمارية والهندسية"
         },
         {
           "letter": "D",
-          "text": "RC5"
+          "text": "RC5",
+          "text_ar": "RC5"
         }
       ],
       "correct_letter": "B",
       "correct_text": "PEKS",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "في التشفير القابل للبحث، يستخدم السيناريو \"Single Reader/Single Writer\":",
+      "correct_text_ar": "بيكس"
     },
     {
       "id": "m52",
@@ -495,24 +603,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "ABKS"
+          "text": "ABKS",
+          "text_ar": "ايه بي كي اس"
         },
         {
           "letter": "B",
-          "text": "RSA"
+          "text": "RSA",
+          "text_ar": "آر إس إيه"
         },
         {
           "letter": "C",
-          "text": "ECC"
+          "text": "ECC",
+          "text_ar": "إي سي سي"
         },
         {
           "letter": "D",
-          "text": "AES"
+          "text": "AES",
+          "text_ar": "الخدمات المعمارية والهندسية"
         }
       ],
       "correct_letter": "A",
       "correct_text": "ABKS",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "في التشفير القابل للبحث، يستخدم السيناريو \"كاتب واحد/قراء متعددون\":",
+      "correct_text_ar": "ايه بي كي اس"
     },
     {
       "id": "m53",
@@ -522,24 +636,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Padding and resizing columns"
+          "text": "Padding and resizing columns",
+          "text_ar": "الحشو وتغيير حجم الأعمدة"
         },
         {
           "letter": "B",
-          "text": "Cloud storage"
+          "text": "Cloud storage",
+          "text_ar": "التخزين السحابي"
         },
         {
           "letter": "C",
-          "text": "ECC implementation"
+          "text": "ECC implementation",
+          "text_ar": "تنفيذ ECC"
         },
         {
           "letter": "D",
-          "text": "AES key length"
+          "text": "AES key length",
+          "text_ar": "طول مفتاح AES"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Padding and resizing columns",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هو التحدي الرئيسي في تشفير نظم إدارة قواعد البيانات (DBMS)؟",
+      "correct_text_ar": "الحشو وتغيير حجم الأعمدة"
     },
     {
       "id": "m54",
@@ -549,24 +669,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Minimal change implications"
+          "text": "Minimal change implications",
+          "text_ar": "الحد الأدنى من آثار التغيير"
         },
         {
           "letter": "B",
-          "text": "Faster brute force"
+          "text": "Faster brute force",
+          "text_ar": "أسرع القوة الغاشمة"
         },
         {
           "letter": "C",
-          "text": "No key management needed"
+          "text": "No key management needed",
+          "text_ar": "لا حاجة لإدارة المفاتيح"
         },
         {
           "letter": "D",
-          "text": "Unlimited storage"
+          "text": "Unlimited storage",
+          "text_ar": "تخزين غير محدود"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Minimal change implications",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هي فائدة تشفير DBMS؟",
+      "correct_text_ar": "الحد الأدنى من آثار التغيير"
     },
     {
       "id": "m55",
@@ -576,24 +702,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Losing the key"
+          "text": "Losing the key",
+          "text_ar": "فقدان المفتاح"
         },
         {
           "letter": "B",
-          "text": "Using ECC"
+          "text": "Using ECC",
+          "text_ar": "باستخدام ECC"
         },
         {
           "letter": "C",
-          "text": "Padding columns"
+          "text": "Padding columns",
+          "text_ar": "أعمدة الحشو"
         },
         {
           "letter": "D",
-          "text": "Cloud storage"
+          "text": "Cloud storage",
+          "text_ar": "التخزين السحابي"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Losing the key",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما هو الخطر في إدارة مفاتيح قواعد البيانات (DBMS)؟",
+      "correct_text_ar": "فقدان المفتاح"
     },
     {
       "id": "m56",
@@ -603,24 +735,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Easier management"
+          "text": "Easier management",
+          "text_ar": "إدارة أسهل"
         },
         {
           "letter": "B",
-          "text": "No complexity"
+          "text": "No complexity",
+          "text_ar": "لا تعقيد"
         },
         {
           "letter": "C",
-          "text": "Faster brute force"
+          "text": "Faster brute force",
+          "text_ar": "أسرع القوة الغاشمة"
         },
         {
           "letter": "D",
-          "text": "Smaller keys"
+          "text": "Smaller keys",
+          "text_ar": "مفاتيح أصغر"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Easier management",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "يتم الترويج لخوادم التشفير من أجل:",
+      "correct_text_ar": "إدارة أسهل"
     },
     {
       "id": "m57",
@@ -630,24 +768,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Added complexity"
+          "text": "Added complexity",
+          "text_ar": "وأضاف التعقيد"
         },
         {
           "letter": "B",
-          "text": "Stronger compliance"
+          "text": "Stronger compliance",
+          "text_ar": "امتثال أقوى"
         },
         {
           "letter": "C",
-          "text": "Faster performance"
+          "text": "Faster performance",
+          "text_ar": "أداء أسرع"
         },
         {
           "letter": "D",
-          "text": "Minimal changes"
+          "text": "Minimal changes",
+          "text_ar": "الحد الأدنى من التغييرات"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Added complexity",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "الجانب السلبي لخوادم التشفير هو:",
+      "correct_text_ar": "وأضاف التعقيد"
     },
     {
       "id": "m58",
@@ -657,24 +801,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "Hackers"
+          "text": "Hackers",
+          "text_ar": "قراصنة"
         },
         {
           "letter": "B",
-          "text": "Accidental or casual intrusion"
+          "text": "Accidental or casual intrusion",
+          "text_ar": "التدخل العرضي أو العرضي"
         },
         {
           "letter": "C",
-          "text": "ECC attacks"
+          "text": "ECC attacks",
+          "text_ar": "هجمات ECC"
         },
         {
           "letter": "D",
-          "text": "AES padding"
+          "text": "AES padding",
+          "text_ar": "حشوة AES"
         }
       ],
       "correct_letter": "B",
       "correct_text": "Accidental or casual intrusion",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "ما الذي يعتبر أكبر خطر على البيانات؟",
+      "correct_text_ar": "التدخل العرضي أو العرضي"
     },
     {
       "id": "m59",
@@ -684,24 +834,30 @@
       "options": [
         {
           "letter": "A",
-          "text": "It is encrypted"
+          "text": "It is encrypted",
+          "text_ar": "إنه مشفر"
         },
         {
           "letter": "B",
-          "text": "It is small"
+          "text": "It is small",
+          "text_ar": "انها صغيرة"
         },
         {
           "letter": "C",
-          "text": "It is hidden"
+          "text": "It is hidden",
+          "text_ar": "إنه مخفي"
         },
         {
           "letter": "D",
-          "text": "It is backed up"
+          "text": "It is backed up",
+          "text_ar": "تم نسخها احتياطيًا"
         }
       ],
       "correct_letter": "A",
       "correct_text": "It is encrypted",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "لا يشكل فقدان محرك القلم خطرًا كبيرًا إذا:",
+      "correct_text_ar": "إنه مشفر"
     },
     {
       "id": "m60",
@@ -711,444 +867,510 @@
       "options": [
         {
           "letter": "A",
-          "text": "Main database"
+          "text": "Main database",
+          "text_ar": "قاعدة البيانات الرئيسية"
         },
         {
           "letter": "B",
-          "text": "Data storage"
+          "text": "Data storage",
+          "text_ar": "تخزين البيانات"
         },
         {
           "letter": "C",
-          "text": "Encryption servers"
+          "text": "Encryption servers",
+          "text_ar": "خوادم التشفير"
         },
         {
           "letter": "D",
-          "text": "Key management"
+          "text": "Key management",
+          "text_ar": "إدارة المفاتيح"
         }
       ],
       "correct_letter": "A",
       "correct_text": "Main database",
-      "explanation": ""
+      "explanation": "",
+      "question_ar": "تؤكد خاتمة الدورة على التركيز بشكل أقل على:",
+      "correct_text_ar": "قاعدة البيانات الرئيسية"
     },
     {
       "id": "t1",
       "type": "true_false",
       "category": "True / False",
       "statement": "Database security protects databases from intentional and accidental threats.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يحمي أمان قاعدة البيانات قواعد البيانات من التهديدات المقصودة والعرضية."
     },
     {
       "id": "t2",
       "type": "true_false",
       "category": "True / False",
       "statement": "Confidentiality allows everyone to access the database.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "السرية تسمح للجميع بالوصول إلى قاعدة البيانات."
     },
     {
       "id": "t3",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption converts data into readable plain text.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يقوم التشفير بتحويل البيانات إلى نص عادي قابل للقراءة."
     },
     {
       "id": "t4",
       "type": "true_false",
       "category": "True / False",
       "statement": "Integrity ensures correctness of data operations.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "النزاهة تضمن صحة عمليات البيانات."
     },
     {
       "id": "t5",
       "type": "true_false",
       "category": "True / False",
       "statement": "Availability means the database should avoid unplanned downtime.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "التوفر يعني أن قاعدة البيانات يجب أن تتجنب التوقف غير المخطط له."
     },
     {
       "id": "t6",
       "type": "true_false",
       "category": "True / False",
       "statement": "Restricting concurrent sessions helps maintain availability.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يساعد تقييد الجلسات المتزامنة في الحفاظ على التوفر."
     },
     {
       "id": "t7",
       "type": "true_false",
       "category": "True / False",
       "statement": "Backing up data helps with availability and recovery.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يساعد النسخ الاحتياطي للبيانات في التوفر والاسترداد."
     },
     {
       "id": "t8",
       "type": "true_false",
       "category": "True / False",
       "statement": "Non-fraudulent threats include natural disasters.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "وتشمل التهديدات غير الاحتيالية الكوارث الطبيعية."
     },
     {
       "id": "t9",
       "type": "true_false",
       "category": "True / False",
       "statement": "Fraudulent threats are always accidental.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "التهديدات الاحتيالية تكون دائمًا عرضية."
     },
     {
       "id": "t10",
       "type": "true_false",
       "category": "True / False",
       "statement": "Authorized users can be a source of security threats.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يمكن أن يكون المستخدمون المعتمدون مصدرًا للتهديدات الأمنية."
     },
     {
       "id": "t11",
       "type": "true_false",
       "category": "True / False",
       "statement": "Weak password policies are a database vulnerability.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تعتبر سياسات كلمات المرور الضعيفة ثغرة أمنية في قاعدة البيانات."
     },
     {
       "id": "t12",
       "type": "true_false",
       "category": "True / False",
       "statement": "SQL injection is a physical attack.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "حقن SQL هو هجوم جسدي."
     },
     {
       "id": "t13",
       "type": "true_false",
       "category": "True / False",
       "statement": "Privilege escalation allows authorized administrative access.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يسمح تصعيد الامتيازات بالوصول الإداري المصرح به."
     },
     {
       "id": "t14",
       "type": "true_false",
       "category": "True / False",
       "statement": "Brute force attacks target weak credentials.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تستهدف هجمات القوة الغاشمة أوراق الاعتماد الضعيفة."
     },
     {
       "id": "t15",
       "type": "true_false",
       "category": "True / False",
       "statement": "Database security is not related to cybersecurity.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "لا يرتبط أمن قاعدة البيانات بالأمن السيبراني."
     },
     {
       "id": "t16",
       "type": "true_false",
       "category": "True / False",
       "statement": "SQL injection allows untrusted user input to be executed as SQL code.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يسمح حقن SQL بتنفيذ إدخال المستخدم غير الموثوق به كرمز SQL."
     },
     {
       "id": "t17",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption in transit protects data stored permanently on disk.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "التشفير أثناء النقل يحمي البيانات المخزنة بشكل دائم على القرص."
     },
     {
       "id": "t18",
       "type": "true_false",
       "category": "True / False",
       "statement": "Denial-of-Service attacks mainly affect database availability.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تؤثر هجمات رفض الخدمة بشكل أساسي على توفر قاعدة البيانات."
     },
     {
       "id": "t19",
       "type": "true_false",
       "category": "True / False",
       "statement": "Using default database credentials improves security.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يؤدي استخدام بيانات اعتماد قاعدة البيانات الافتراضية إلى تحسين الأمان."
     },
     {
       "id": "t20",
       "type": "true_false",
       "category": "True / False",
       "statement": "Insider threats may be either intentional or accidental.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "قد تكون التهديدات الداخلية إما مقصودة أو عرضية."
     },
     {
       "id": "t21",
       "type": "true_false",
       "category": "True / False",
       "statement": "Parameterized queries reduce the risk of SQL injection.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تعمل الاستعلامات ذات المعلمات على تقليل مخاطر حقن SQL."
     },
     {
       "id": "t22",
       "type": "true_false",
       "category": "True / False",
       "statement": "WPA2 is used to encrypt database tables.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يتم استخدام WPA2 لتشفير جداول قاعدة البيانات."
     },
     {
       "id": "t23",
       "type": "true_false",
       "category": "True / False",
       "statement": "Metadata publication is required for mobile and main database synchronization.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "مطلوب نشر البيانات التعريفية لمزامنة قاعدة البيانات المتنقلة والرئيسية."
     },
     {
       "id": "t24",
       "type": "true_false",
       "category": "True / False",
       "statement": "Row-level security restricts access to specific records in a table.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يقوم الأمان على مستوى الصف بتقييد الوصول إلى سجلات محددة في الجدول."
     },
     {
       "id": "t25",
       "type": "true_false",
       "category": "True / False",
       "statement": "Ransomware encrypts data and demands payment for decryption.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تقوم برامج الفدية بتشفير البيانات وتطلب الدفع مقابل فك التشفير."
     },
     {
       "id": "t26",
       "type": "true_false",
       "category": "True / False",
       "statement": "Confidentiality focuses on data accuracy and consistency.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "تركز السرية على دقة البيانات واتساقها."
     },
     {
       "id": "t27",
       "type": "true_false",
       "category": "True / False",
       "statement": "Error-based SQL injection relies on database error messages.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يعتمد حقن SQL المستند إلى الأخطاء على رسائل خطأ قاعدة البيانات."
     },
     {
       "id": "t28",
       "type": "true_false",
       "category": "True / False",
       "statement": "Offline backups help protect data from ransomware attacks.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تساعد النسخ الاحتياطية دون اتصال على حماية البيانات من هجمات برامج الفدية."
     },
     {
       "id": "t29",
       "type": "true_false",
       "category": "True / False",
       "statement": "Database administrators should manage encryption keys without separation of duties.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يجب على مسؤولي قواعد البيانات إدارة مفاتيح التشفير دون فصل الواجبات."
     },
     {
       "id": "t30",
       "type": "true_false",
       "category": "True / False",
       "statement": "Ethical database testing requires proper authorization.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يتطلب اختبار قاعدة البيانات الأخلاقية الحصول على إذن مناسب."
     },
     {
       "id": "t31",
       "type": "true_false",
       "category": "True / False",
       "statement": "Database security always balances performance and convenience.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يوازن أمان قاعدة البيانات دائمًا بين الأداء والراحة."
     },
     {
       "id": "t32",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption can be applied to data at rest, in transit, and end-to-end.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يمكن تطبيق التشفير على البيانات غير النشطة، وأثناء النقل، ومن طرف إلى طرف."
     },
     {
       "id": "t33",
       "type": "true_false",
       "category": "True / False",
       "statement": "DES is still widely used in modern DBMS encryption.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "لا يزال DES يستخدم على نطاق واسع في تشفير DBMS الحديث."
     },
     {
       "id": "t34",
       "type": "true_false",
       "category": "True / False",
       "statement": "3DES is faster than DES.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "3DES أسرع من DES."
     },
     {
       "id": "t35",
       "type": "true_false",
       "category": "True / False",
       "statement": "AES supports key sizes of 128, 192, and 256 bits.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يدعم AES أحجام المفاتيح 128 و192 و256 بت."
     },
     {
       "id": "t36",
       "type": "true_false",
       "category": "True / False",
       "statement": "RC5 allows variable key length.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يسمح RC5 بطول مفتاح متغير."
     },
     {
       "id": "t37",
       "type": "true_false",
       "category": "True / False",
       "statement": "Format-Preserving Encryption changes the format of data.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يعمل تشفير الحفاظ على التنسيق على تغيير تنسيق البيانات."
     },
     {
       "id": "t38",
       "type": "true_false",
       "category": "True / False",
       "statement": "ECC uses shorter keys than RSA.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تستخدم ECC مفاتيح أقصر من RSA."
     },
     {
       "id": "t39",
       "type": "true_false",
       "category": "True / False",
       "statement": "Searchable Encryption requires plaintext access.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يتطلب التشفير القابل للبحث الوصول إلى نص عادي."
     },
     {
       "id": "t40",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption is often considered the last line of defense.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "غالبًا ما يُعتبر التشفير خط الدفاع الأخير."
     },
     {
       "id": "t41",
       "type": "true_false",
       "category": "True / False",
       "statement": "DBMS encryption was criticized for using outdated algorithms.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تم انتقاد تشفير نظام إدارة قواعد البيانات (DBMS) لاستخدامه خوارزميات قديمة."
     },
     {
       "id": "t42",
       "type": "true_false",
       "category": "True / False",
       "statement": "Keys stored inside the database are always secure.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "المفاتيح المخزنة داخل قاعدة البيانات آمنة دائمًا."
     },
     {
       "id": "t43",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption servers reduce computation overhead from DBMS.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "تعمل خوادم التشفير على تقليل الحمل الحسابي من نظام إدارة قواعد البيانات (DBMS)."
     },
     {
       "id": "t44",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption servers add no complexity.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "لا تضيف خوادم التشفير أي تعقيد."
     },
     {
       "id": "t45",
       "type": "true_false",
       "category": "True / False",
       "statement": "Losing an encrypted pen drive is a major security risk.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يعد فقدان محرك القلم المشفر بمثابة خطر أمني كبير."
     },
     {
       "id": "t46",
       "type": "true_false",
       "category": "True / False",
       "statement": "DES uses a 56-bit key.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يستخدم DES مفتاح 56 بت."
     },
     {
       "id": "t47",
       "type": "true_false",
       "category": "True / False",
       "statement": "3DES is slower than DES.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "3DES أبطأ من DES."
     },
     {
       "id": "t48",
       "type": "true_false",
       "category": "True / False",
       "statement": "AES is more secure than DES.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "AES أكثر أمانًا من DES."
     },
     {
       "id": "t49",
       "type": "true_false",
       "category": "True / False",
       "statement": "RC5 is an asymmetric algorithm.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "RC5 هي خوارزمية غير متماثلة."
     },
     {
       "id": "t50",
       "type": "true_false",
       "category": "True / False",
       "statement": "Format-Preserving Encryption retains the format of data.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يحتفظ تشفير الحفاظ على التنسيق بتنسيق البيانات."
     },
     {
       "id": "t51",
       "type": "true_false",
       "category": "True / False",
       "statement": "ECC is faster and stronger than RSA.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "ECC أسرع وأقوى من RSA."
     },
     {
       "id": "t52",
       "type": "true_false",
       "category": "True / False",
       "statement": "Searchable Encryption allows queries without decrypting data.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يسمح التشفير القابل للبحث بالاستعلامات دون فك تشفير البيانات."
     },
     {
       "id": "t53",
       "type": "true_false",
       "category": "True / False",
       "statement": "SSE is used in the \"Owner as Reader/Writer\" scenario.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يتم استخدام SSE في السيناريو \"المالك كقارئ/كاتب\"."
     },
     {
       "id": "t54",
       "type": "true_false",
       "category": "True / False",
       "statement": "PEKS is used in the \"One Writer/Many Readers\" scenario.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "يتم استخدام PEKS في سيناريو \"كاتب واحد/عديد من القراء\"."
     },
     {
       "id": "t55",
       "type": "true_false",
       "category": "True / False",
       "statement": "ABKS is used in the \"One Writer/Many Readers\" scenario.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يتم استخدام ABKS في سيناريو \"كاتب واحد/عدة قراء\"."
     },
     {
       "id": "t56",
       "type": "true_false",
       "category": "True / False",
       "statement": "DBMS encryption faced disk size problems.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "واجه تشفير DBMS مشاكل في حجم القرص."
     },
     {
       "id": "t57",
       "type": "true_false",
       "category": "True / False",
       "statement": "DBMS encryption sometimes used outdated algorithms like DES.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "يستخدم تشفير DBMS أحيانًا خوارزميات قديمة مثل DES."
     },
     {
       "id": "t58",
       "type": "true_false",
       "category": "True / False",
       "statement": "Keys stored inside the database are always secure.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "المفاتيح المخزنة داخل قاعدة البيانات آمنة دائمًا."
     },
     {
       "id": "t59",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption servers provide wider coverage of data.",
-      "correct_bool": true
+      "correct_bool": true,
+      "statement_ar": "توفر خوادم التشفير تغطية أوسع للبيانات."
     },
     {
       "id": "t60",
       "type": "true_false",
       "category": "True / False",
       "statement": "Encryption servers add no cost.",
-      "correct_bool": false
+      "correct_bool": false,
+      "statement_ar": "لا تضيف خوادم التشفير أي تكلفة."
     }
   ]
 }
