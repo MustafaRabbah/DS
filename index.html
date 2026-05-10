@@ -139,6 +139,19 @@
 
     .credit strong { color: var(--accent); }
 
+    .credit-tg {
+      margin: 0.2rem 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .credit-tg a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .credit-tg a:hover { text-decoration: underline; }
+
     .hint-tap {
       font-size: 0.68rem;
       color: var(--muted);
@@ -554,6 +567,9 @@
       <h1 id="pageTitle">MCQ Examination</h1>
       <p class="sub" id="pageSub"></p>
       <p class="credit" id="creditHead">By <strong>Mustafa Rabbah</strong></p>
+      <p class="credit-tg">
+        <a class="credit-tg-link" href="https://t.me/x1fd5" target="_blank" rel="noopener noreferrer" dir="ltr">Telegram · @x1fd5</a>
+      </p>
       <p class="hint-tap" data-ui="hintTap" hidden></p>
     </header>
 
@@ -590,6 +606,9 @@
     <footer>
       <p style="margin:0 0 0.5rem;font-size:0.85rem"><a href="final.html" style="color:#38bdf8">Final question bank (MCQ + T/F)</a></p>
       <p class="credit-footer" id="creditFoot">By <strong>Mustafa Rabbah</strong></p>
+      <p class="credit-tg">
+        <a class="credit-tg-link" href="https://t.me/x1fd5" target="_blank" rel="noopener noreferrer" dir="ltr">Telegram · @x1fd5</a>
+      </p>
     </footer>
   </div>
 
@@ -673,6 +692,9 @@
       return v ?? UI_STR.en[key];
     }
 
+    const TELEGRAM_URL = "https://t.me/x1fd5";
+    const TELEGRAM_HANDLE = "@x1fd5";
+
     function setCreditLines() {
       const head = document.getElementById("creditHead");
       const foot = document.getElementById("creditFoot");
@@ -683,6 +705,12 @@
         head.innerHTML = `${escapeHtml(t("credit"))}<strong>${escapeHtml(UI_STR.en.creditName)}</strong>`;
         foot.innerHTML = `${escapeHtml(t("credit"))}<strong>${escapeHtml(UI_STR.en.creditName)}</strong>`;
       }
+      const tgLabel = uiLang === "ar" ? "تيليجرام" : "Telegram";
+      document.querySelectorAll("a.credit-tg-link").forEach((a) => {
+        a.href = TELEGRAM_URL;
+        a.textContent = `${tgLabel} · ${TELEGRAM_HANDLE}`;
+        a.setAttribute("aria-label", `${tgLabel} ${TELEGRAM_HANDLE}`);
+      });
     }
 
     function applyUiStrings() {
