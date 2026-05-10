@@ -1,0 +1,214 @@
+Database Security — Question Bank
+Page 6 of 20
+D) Digital signatures
+Q34. DES is considered insecure because:
+A) It uses 128-bit keys
+B) It is vulnerable to brute force ✓
+C) It is asymmetric
+D) It is format-preserving
+Q35. 3DES improves DES by:
+A) Using longer keys
+B) Triple encryption ✓
+C) Adding padding
+D) Using elliptic curves
+Q36. AES with a 256-bit key uses how many rounds?
+A) 10
+B) 12
+C) 14 ✓
+D) 16
+Q37. RC5 encryption is known for being:
+A) Slow and rigid
+B) Fast and flexible ✓
+C) Asymmetric
+D) Outdated
+Q38. Format-Preserving Encryption (FPE) maintains:
+A) Key length
+B) Data format ✓
+C) Cipher strength
+D) Storage size
+Q39. ECC is stronger than RSA because:
+A) It uses longer keys
+B) It uses shorter keys ✓
+C) It is symmetric
+D) It is format-preserving
+Q40. Searchable Encryption allows:
+A) Queries over encrypted data ✓
+B) Faster brute force
+C) Keyless encryption
+D) Padding removal
+Q41. Encryption is often described as:
+A) First line of defense
+B) Last line of defense ✓
+C) Optional security
+D) Performance enhancer
+Q42. DBMS encryption initially faced problems with:
+Database Security — Question Bank
+Page 7 of 20
+A) Disk size ✓
+B) Key length
+C) Padding removal
+D) Cloud storage
+Q43. A major issue with DBMS encryption is:
+A) Algorithm speed
+B) Key storage inside the database ✓
+C) Lack of padding
+D) Cloud incompatibility
+Q44. Encryption servers are criticized for:
+A) Added complexity ✓
+B) Stronger compliance
+C) Faster performance
+D) Minimal changes
+Q45. Which encryption algorithm is used in Bitcoin digital signatures?
+A) RSA
+B) ECC ✓
+C) AES
+D) DES
+Q46. Which encryption method is considered outdated and insecure today?
+A) AES
+B) DES ✓
+C) ECC
+D) RC5
+Q47. Which encryption method is supported in Oracle & DB2?
+A) RC5 ✓
+B) ECC
+C) RSA
+D) FPE
+Q48. Which encryption method is used in cloud platforms like AWS and Google Cloud?
+A) AES
+B) FPE ✓
+C) RSA
+D) ECC
+Q49. Which encryption method allows search queries over encrypted data?
+A) SE ✓
+B) AES
+C) RC5
+D) ECC
+Q50. In searchable encryption, the "Owner as Reader/Writer" scenario uses:
+A) ABKS
+B) SSE ✓
+Database Security — Question Bank
+Page 8 of 20
+C) PEKS
+D) RSA
+Q51. In searchable encryption, the "Single Reader/Single Writer" scenario uses:
+A) ECC
+B) PEKS ✓
+C) AES
+D) RC5
+Q52. In searchable encryption, the "One Writer/Many Readers" scenario uses:
+A) ABKS ✓
+B) RSA
+C) ECC
+D) AES
+Q53. Which is a major challenge in DBMS encryption?
+A) Padding and resizing columns ✓
+B) Cloud storage
+C) ECC implementation
+D) AES key length
+Q54. Which is a benefit of DBMS encryption?
+A) Minimal change implications ✓
+B) Faster brute force
+C) No key management needed
+D) Unlimited storage
+Q55. Which is a risk in DBMS key management?
+A) Losing the key ✓
+B) Using ECC
+C) Padding columns
+D) Cloud storage
+Q56. Encryption servers are promoted for:
+A) Easier management ✓
+B) No complexity
+C) Faster brute force
+D) Smaller keys
+Q57. A downside of encryption servers is:
+A) Added complexity ✓
+B) Stronger compliance
+C) Faster performance
+D) Minimal changes
+Q58. Which is considered the biggest risk to data?
+A) Hackers
+B) Accidental or casual intrusion ✓
+C) ECC attacks
+D) AES padding
+Database Security — Question Bank
+Page 9 of 20
+Q59. Losing a pen drive is not a major risk if:
+A) It is encrypted ✓
+B) It is small
+C) It is hidden
+D) It is backed up
+Q60. The conclusion of the course emphasizes focusing less on:
+A) Main database ✓
+B) Data storage
+C) Encryption servers
+D) Key management
+Database Security — Question Bank
+Page 10 of 20
+Section 2: True / False Questions
+Total Questions: 60 | Determine whether each statement is True or False.
+# Statement Answer
+1 Database security protects databases from intentional and accidental threats. True
+2 Confidentiality allows everyone to access the database. False
+3 Encryption converts data into readable plain text. False
+4 Integrity ensures correctness of data operations. True
+5 Availability means the database should avoid unplanned downtime. True
+6 Restricting concurrent sessions helps maintain availability. True
+7 Backing up data helps with availability and recovery. True
+8 Non-fraudulent threats include natural disasters. True
+9 Fraudulent threats are always accidental. False
+10 Authorized users can be a source of security threats. True
+11 Weak password policies are a database vulnerability. True
+12 SQL injection is a physical attack. False
+13 Privilege escalation allows authorized administrative access. False
+14 Brute force attacks target weak credentials. True
+15 Database security is not related to cybersecurity. False
+16 SQL injection allows untrusted user input to be executed as SQL code. True
+17 Encryption in transit protects data stored permanently on disk. False
+18 Denial-of-Service attacks mainly affect database availability. True
+19 Using default database credentials improves security. False
+20 Insider threats may be either intentional or accidental. True
+21 Parameterized queries reduce the risk of SQL injection. True
+22 WPA2 is used to encrypt database tables. False
+23 Metadata publication is required for mobile and main database synchronization. True
+24 Row-level security restricts access to specific records in a table. True
+25 Ransomware encrypts data and demands payment for decryption. True
+26 Confidentiality focuses on data accuracy and consistency. False
+27 Error-based SQL injection relies on database error messages. True
+28 Offline backups help protect data from ransomware attacks. True
+29 Database administrators should manage encryption keys without separation of
+duties.
+False
+30 Ethical database testing requires proper authorization. True
+Database Security — Question Bank
+Page 11 of 20
+# Statement Answer
+31 Database security always balances performance and convenience. True
+32 Encryption can be applied to data at rest, in transit, and end-to-end. True
+33 DES is still widely used in modern DBMS encryption. False
+34 3DES is faster than DES. False
+35 AES supports key sizes of 128, 192, and 256 bits. True
+36 RC5 allows variable key length. True
+37 Format-Preserving Encryption changes the format of data. False
+38 ECC uses shorter keys than RSA. True
+39 Searchable Encryption requires plaintext access. False
+40 Encryption is often considered the last line of defense. True
+41 DBMS encryption was criticized for using outdated algorithms. True
+42 Keys stored inside the database are always secure. False
+43 Encryption servers reduce computation overhead from DBMS. True
+44 Encryption servers add no complexity. False
+45 Losing an encrypted pen drive is a major security risk. False
+46 DES uses a 56-bit key. True
+47 3DES is slower than DES. True
+48 AES is more secure than DES. True
+49 RC5 is an asymmetric algorithm. False
+50 Format-Preserving Encryption retains the format of data. True
+51 ECC is faster and stronger than RSA. True
+52 Searchable Encryption allows queries without decrypting data. True
+53 SSE is used in the "Owner as Reader/Writer" scenario. True
+54 PEKS is used in the "One Writer/Many Readers" scenario. False
+55 ABKS is used in the "One Writer/Many Readers" scenario. True
+56 DBMS encryption faced disk size problems. True
+57 DBMS encryption sometimes used outdated algorithms like DES. True
+58 Keys stored inside the database are always secure. False
+59 Encryption servers provide wider coverage of data. True
+60 Encryption servers add no cost. False

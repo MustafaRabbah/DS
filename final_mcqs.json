@@ -1,0 +1,1154 @@
+{
+  "title": "Database Security — Final Question Bank",
+  "questions": [
+    {
+      "id": "m34",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "DES is considered insecure because:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It uses 128-bit keys"
+        },
+        {
+          "letter": "B",
+          "text": "It is vulnerable to brute force"
+        },
+        {
+          "letter": "C",
+          "text": "It is asymmetric"
+        },
+        {
+          "letter": "D",
+          "text": "It is format-preserving"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "It is vulnerable to brute force",
+      "explanation": ""
+    },
+    {
+      "id": "m35",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "3DES improves DES by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Using longer keys"
+        },
+        {
+          "letter": "B",
+          "text": "Triple encryption"
+        },
+        {
+          "letter": "C",
+          "text": "Adding padding"
+        },
+        {
+          "letter": "D",
+          "text": "Using elliptic curves"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Triple encryption",
+      "explanation": ""
+    },
+    {
+      "id": "m36",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "AES with a 256-bit key uses how many rounds?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10"
+        },
+        {
+          "letter": "B",
+          "text": "12"
+        },
+        {
+          "letter": "C",
+          "text": "14"
+        },
+        {
+          "letter": "D",
+          "text": "16"
+        }
+      ],
+      "correct_letter": "C",
+      "correct_text": "14",
+      "explanation": ""
+    },
+    {
+      "id": "m37",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "RC5 encryption is known for being:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Slow and rigid"
+        },
+        {
+          "letter": "B",
+          "text": "Fast and flexible"
+        },
+        {
+          "letter": "C",
+          "text": "Asymmetric"
+        },
+        {
+          "letter": "D",
+          "text": "Outdated"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Fast and flexible",
+      "explanation": ""
+    },
+    {
+      "id": "m38",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Format-Preserving Encryption (FPE) maintains:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Key length"
+        },
+        {
+          "letter": "B",
+          "text": "Data format"
+        },
+        {
+          "letter": "C",
+          "text": "Cipher strength"
+        },
+        {
+          "letter": "D",
+          "text": "Storage size"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Data format",
+      "explanation": ""
+    },
+    {
+      "id": "m39",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "ECC is stronger than RSA because:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It uses longer keys"
+        },
+        {
+          "letter": "B",
+          "text": "It uses shorter keys"
+        },
+        {
+          "letter": "C",
+          "text": "It is symmetric"
+        },
+        {
+          "letter": "D",
+          "text": "It is format-preserving"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "It uses shorter keys",
+      "explanation": ""
+    },
+    {
+      "id": "m40",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Searchable Encryption allows:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Queries over encrypted data"
+        },
+        {
+          "letter": "B",
+          "text": "Faster brute force"
+        },
+        {
+          "letter": "C",
+          "text": "Keyless encryption"
+        },
+        {
+          "letter": "D",
+          "text": "Padding removal"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Queries over encrypted data",
+      "explanation": ""
+    },
+    {
+      "id": "m41",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Encryption is often described as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "First line of defense"
+        },
+        {
+          "letter": "B",
+          "text": "Last line of defense"
+        },
+        {
+          "letter": "C",
+          "text": "Optional security"
+        },
+        {
+          "letter": "D",
+          "text": "Performance enhancer"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Last line of defense",
+      "explanation": ""
+    },
+    {
+      "id": "m42",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "DBMS encryption initially faced problems with:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Disk size"
+        },
+        {
+          "letter": "B",
+          "text": "Key length"
+        },
+        {
+          "letter": "C",
+          "text": "Padding removal"
+        },
+        {
+          "letter": "D",
+          "text": "Cloud storage"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Disk size",
+      "explanation": ""
+    },
+    {
+      "id": "m43",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "A major issue with DBMS encryption is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Algorithm speed"
+        },
+        {
+          "letter": "B",
+          "text": "Key storage inside the database"
+        },
+        {
+          "letter": "C",
+          "text": "Lack of padding"
+        },
+        {
+          "letter": "D",
+          "text": "Cloud incompatibility"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Key storage inside the database",
+      "explanation": ""
+    },
+    {
+      "id": "m44",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Encryption servers are criticized for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Added complexity"
+        },
+        {
+          "letter": "B",
+          "text": "Stronger compliance"
+        },
+        {
+          "letter": "C",
+          "text": "Faster performance"
+        },
+        {
+          "letter": "D",
+          "text": "Minimal changes"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Added complexity",
+      "explanation": ""
+    },
+    {
+      "id": "m45",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which encryption algorithm is used in Bitcoin digital signatures?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "RSA"
+        },
+        {
+          "letter": "B",
+          "text": "ECC"
+        },
+        {
+          "letter": "C",
+          "text": "AES"
+        },
+        {
+          "letter": "D",
+          "text": "DES"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "ECC",
+      "explanation": ""
+    },
+    {
+      "id": "m46",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which encryption method is considered outdated and insecure today?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "AES"
+        },
+        {
+          "letter": "B",
+          "text": "DES"
+        },
+        {
+          "letter": "C",
+          "text": "ECC"
+        },
+        {
+          "letter": "D",
+          "text": "RC5"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "DES",
+      "explanation": ""
+    },
+    {
+      "id": "m47",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which encryption method is supported in Oracle & DB2?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "RC5"
+        },
+        {
+          "letter": "B",
+          "text": "ECC"
+        },
+        {
+          "letter": "C",
+          "text": "RSA"
+        },
+        {
+          "letter": "D",
+          "text": "FPE"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "RC5",
+      "explanation": ""
+    },
+    {
+      "id": "m48",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which encryption method is used in cloud platforms like AWS and Google Cloud?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "AES"
+        },
+        {
+          "letter": "B",
+          "text": "FPE"
+        },
+        {
+          "letter": "C",
+          "text": "RSA"
+        },
+        {
+          "letter": "D",
+          "text": "ECC"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "FPE",
+      "explanation": ""
+    },
+    {
+      "id": "m49",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which encryption method allows search queries over encrypted data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "SE"
+        },
+        {
+          "letter": "B",
+          "text": "AES"
+        },
+        {
+          "letter": "C",
+          "text": "RC5"
+        },
+        {
+          "letter": "D",
+          "text": "ECC"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "SE",
+      "explanation": ""
+    },
+    {
+      "id": "m50",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "In searchable encryption, the \"Owner as Reader/Writer\" scenario uses:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "ABKS"
+        },
+        {
+          "letter": "B",
+          "text": "SSE"
+        },
+        {
+          "letter": "C",
+          "text": "PEKS"
+        },
+        {
+          "letter": "D",
+          "text": "RSA"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "SSE",
+      "explanation": ""
+    },
+    {
+      "id": "m51",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "In searchable encryption, the \"Single Reader/Single Writer\" scenario uses:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "ECC"
+        },
+        {
+          "letter": "B",
+          "text": "PEKS"
+        },
+        {
+          "letter": "C",
+          "text": "AES"
+        },
+        {
+          "letter": "D",
+          "text": "RC5"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "PEKS",
+      "explanation": ""
+    },
+    {
+      "id": "m52",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "In searchable encryption, the \"One Writer/Many Readers\" scenario uses:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "ABKS"
+        },
+        {
+          "letter": "B",
+          "text": "RSA"
+        },
+        {
+          "letter": "C",
+          "text": "ECC"
+        },
+        {
+          "letter": "D",
+          "text": "AES"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "ABKS",
+      "explanation": ""
+    },
+    {
+      "id": "m53",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which is a major challenge in DBMS encryption?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Padding and resizing columns"
+        },
+        {
+          "letter": "B",
+          "text": "Cloud storage"
+        },
+        {
+          "letter": "C",
+          "text": "ECC implementation"
+        },
+        {
+          "letter": "D",
+          "text": "AES key length"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Padding and resizing columns",
+      "explanation": ""
+    },
+    {
+      "id": "m54",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which is a benefit of DBMS encryption?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Minimal change implications"
+        },
+        {
+          "letter": "B",
+          "text": "Faster brute force"
+        },
+        {
+          "letter": "C",
+          "text": "No key management needed"
+        },
+        {
+          "letter": "D",
+          "text": "Unlimited storage"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Minimal change implications",
+      "explanation": ""
+    },
+    {
+      "id": "m55",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which is a risk in DBMS key management?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Losing the key"
+        },
+        {
+          "letter": "B",
+          "text": "Using ECC"
+        },
+        {
+          "letter": "C",
+          "text": "Padding columns"
+        },
+        {
+          "letter": "D",
+          "text": "Cloud storage"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Losing the key",
+      "explanation": ""
+    },
+    {
+      "id": "m56",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Encryption servers are promoted for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Easier management"
+        },
+        {
+          "letter": "B",
+          "text": "No complexity"
+        },
+        {
+          "letter": "C",
+          "text": "Faster brute force"
+        },
+        {
+          "letter": "D",
+          "text": "Smaller keys"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Easier management",
+      "explanation": ""
+    },
+    {
+      "id": "m57",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "A downside of encryption servers is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Added complexity"
+        },
+        {
+          "letter": "B",
+          "text": "Stronger compliance"
+        },
+        {
+          "letter": "C",
+          "text": "Faster performance"
+        },
+        {
+          "letter": "D",
+          "text": "Minimal changes"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Added complexity",
+      "explanation": ""
+    },
+    {
+      "id": "m58",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Which is considered the biggest risk to data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Hackers"
+        },
+        {
+          "letter": "B",
+          "text": "Accidental or casual intrusion"
+        },
+        {
+          "letter": "C",
+          "text": "ECC attacks"
+        },
+        {
+          "letter": "D",
+          "text": "AES padding"
+        }
+      ],
+      "correct_letter": "B",
+      "correct_text": "Accidental or casual intrusion",
+      "explanation": ""
+    },
+    {
+      "id": "m59",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "Losing a pen drive is not a major risk if:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It is encrypted"
+        },
+        {
+          "letter": "B",
+          "text": "It is small"
+        },
+        {
+          "letter": "C",
+          "text": "It is hidden"
+        },
+        {
+          "letter": "D",
+          "text": "It is backed up"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "It is encrypted",
+      "explanation": ""
+    },
+    {
+      "id": "m60",
+      "type": "mcq",
+      "category": "Multiple Choice",
+      "question": "The conclusion of the course emphasizes focusing less on:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Main database"
+        },
+        {
+          "letter": "B",
+          "text": "Data storage"
+        },
+        {
+          "letter": "C",
+          "text": "Encryption servers"
+        },
+        {
+          "letter": "D",
+          "text": "Key management"
+        }
+      ],
+      "correct_letter": "A",
+      "correct_text": "Main database",
+      "explanation": ""
+    },
+    {
+      "id": "t1",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Database security protects databases from intentional and accidental threats.",
+      "correct_bool": true
+    },
+    {
+      "id": "t2",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Confidentiality allows everyone to access the database.",
+      "correct_bool": false
+    },
+    {
+      "id": "t3",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption converts data into readable plain text.",
+      "correct_bool": false
+    },
+    {
+      "id": "t4",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Integrity ensures correctness of data operations.",
+      "correct_bool": true
+    },
+    {
+      "id": "t5",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Availability means the database should avoid unplanned downtime.",
+      "correct_bool": true
+    },
+    {
+      "id": "t6",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Restricting concurrent sessions helps maintain availability.",
+      "correct_bool": true
+    },
+    {
+      "id": "t7",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Backing up data helps with availability and recovery.",
+      "correct_bool": true
+    },
+    {
+      "id": "t8",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Non-fraudulent threats include natural disasters.",
+      "correct_bool": true
+    },
+    {
+      "id": "t9",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Fraudulent threats are always accidental.",
+      "correct_bool": false
+    },
+    {
+      "id": "t10",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Authorized users can be a source of security threats.",
+      "correct_bool": true
+    },
+    {
+      "id": "t11",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Weak password policies are a database vulnerability.",
+      "correct_bool": true
+    },
+    {
+      "id": "t12",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "SQL injection is a physical attack.",
+      "correct_bool": false
+    },
+    {
+      "id": "t13",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Privilege escalation allows authorized administrative access.",
+      "correct_bool": false
+    },
+    {
+      "id": "t14",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Brute force attacks target weak credentials.",
+      "correct_bool": true
+    },
+    {
+      "id": "t15",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Database security is not related to cybersecurity.",
+      "correct_bool": false
+    },
+    {
+      "id": "t16",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "SQL injection allows untrusted user input to be executed as SQL code.",
+      "correct_bool": true
+    },
+    {
+      "id": "t17",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption in transit protects data stored permanently on disk.",
+      "correct_bool": false
+    },
+    {
+      "id": "t18",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Denial-of-Service attacks mainly affect database availability.",
+      "correct_bool": true
+    },
+    {
+      "id": "t19",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Using default database credentials improves security.",
+      "correct_bool": false
+    },
+    {
+      "id": "t20",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Insider threats may be either intentional or accidental.",
+      "correct_bool": true
+    },
+    {
+      "id": "t21",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Parameterized queries reduce the risk of SQL injection.",
+      "correct_bool": true
+    },
+    {
+      "id": "t22",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "WPA2 is used to encrypt database tables.",
+      "correct_bool": false
+    },
+    {
+      "id": "t23",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Metadata publication is required for mobile and main database synchronization.",
+      "correct_bool": true
+    },
+    {
+      "id": "t24",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Row-level security restricts access to specific records in a table.",
+      "correct_bool": true
+    },
+    {
+      "id": "t25",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Ransomware encrypts data and demands payment for decryption.",
+      "correct_bool": true
+    },
+    {
+      "id": "t26",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Confidentiality focuses on data accuracy and consistency.",
+      "correct_bool": false
+    },
+    {
+      "id": "t27",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Error-based SQL injection relies on database error messages.",
+      "correct_bool": true
+    },
+    {
+      "id": "t28",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Offline backups help protect data from ransomware attacks.",
+      "correct_bool": true
+    },
+    {
+      "id": "t29",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Database administrators should manage encryption keys without separation of duties.",
+      "correct_bool": false
+    },
+    {
+      "id": "t30",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Ethical database testing requires proper authorization.",
+      "correct_bool": true
+    },
+    {
+      "id": "t31",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Database security always balances performance and convenience.",
+      "correct_bool": true
+    },
+    {
+      "id": "t32",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption can be applied to data at rest, in transit, and end-to-end.",
+      "correct_bool": true
+    },
+    {
+      "id": "t33",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "DES is still widely used in modern DBMS encryption.",
+      "correct_bool": false
+    },
+    {
+      "id": "t34",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "3DES is faster than DES.",
+      "correct_bool": false
+    },
+    {
+      "id": "t35",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "AES supports key sizes of 128, 192, and 256 bits.",
+      "correct_bool": true
+    },
+    {
+      "id": "t36",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "RC5 allows variable key length.",
+      "correct_bool": true
+    },
+    {
+      "id": "t37",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Format-Preserving Encryption changes the format of data.",
+      "correct_bool": false
+    },
+    {
+      "id": "t38",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "ECC uses shorter keys than RSA.",
+      "correct_bool": true
+    },
+    {
+      "id": "t39",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Searchable Encryption requires plaintext access.",
+      "correct_bool": false
+    },
+    {
+      "id": "t40",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption is often considered the last line of defense.",
+      "correct_bool": true
+    },
+    {
+      "id": "t41",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "DBMS encryption was criticized for using outdated algorithms.",
+      "correct_bool": true
+    },
+    {
+      "id": "t42",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Keys stored inside the database are always secure.",
+      "correct_bool": false
+    },
+    {
+      "id": "t43",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption servers reduce computation overhead from DBMS.",
+      "correct_bool": true
+    },
+    {
+      "id": "t44",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption servers add no complexity.",
+      "correct_bool": false
+    },
+    {
+      "id": "t45",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Losing an encrypted pen drive is a major security risk.",
+      "correct_bool": false
+    },
+    {
+      "id": "t46",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "DES uses a 56-bit key.",
+      "correct_bool": true
+    },
+    {
+      "id": "t47",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "3DES is slower than DES.",
+      "correct_bool": true
+    },
+    {
+      "id": "t48",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "AES is more secure than DES.",
+      "correct_bool": true
+    },
+    {
+      "id": "t49",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "RC5 is an asymmetric algorithm.",
+      "correct_bool": false
+    },
+    {
+      "id": "t50",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Format-Preserving Encryption retains the format of data.",
+      "correct_bool": true
+    },
+    {
+      "id": "t51",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "ECC is faster and stronger than RSA.",
+      "correct_bool": true
+    },
+    {
+      "id": "t52",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Searchable Encryption allows queries without decrypting data.",
+      "correct_bool": true
+    },
+    {
+      "id": "t53",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "SSE is used in the \"Owner as Reader/Writer\" scenario.",
+      "correct_bool": true
+    },
+    {
+      "id": "t54",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "PEKS is used in the \"One Writer/Many Readers\" scenario.",
+      "correct_bool": false
+    },
+    {
+      "id": "t55",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "ABKS is used in the \"One Writer/Many Readers\" scenario.",
+      "correct_bool": true
+    },
+    {
+      "id": "t56",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "DBMS encryption faced disk size problems.",
+      "correct_bool": true
+    },
+    {
+      "id": "t57",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "DBMS encryption sometimes used outdated algorithms like DES.",
+      "correct_bool": true
+    },
+    {
+      "id": "t58",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Keys stored inside the database are always secure.",
+      "correct_bool": false
+    },
+    {
+      "id": "t59",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption servers provide wider coverage of data.",
+      "correct_bool": true
+    },
+    {
+      "id": "t60",
+      "type": "true_false",
+      "category": "True / False",
+      "statement": "Encryption servers add no cost.",
+      "correct_bool": false
+    }
+  ]
+}
