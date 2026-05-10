@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Final Exam — Database Security</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-2: #334155;
+      --border: #475569;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #7dd3fc;
+      --ok: #4ade80;
+      --ok-bg: rgba(74, 222, 128, 0.12);
+      --bad: #f87171;
+      --bad-bg: rgba(248, 113, 113, 0.1);
+      --warn: #fbbf24;
+      --radius: 10px;
+      --touch: 48px;
+      --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", "Helvetica Neue", sans-serif;
+      --mono: ui-monospace, "Cascadia Code", Menlo, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+      padding:
+        max(0.5rem, env(safe-area-inset-top))
+        max(0.75rem, env(safe-area-inset-right))
+        max(1rem, env(safe-area-inset-bottom))
+        max(0.75rem, env(safe-area-inset-left));
+    }
+
+    .wrap { max-width: 36rem; margin: 0 auto; }
+
+    .nav-top {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-top a {
+      font-size: 0.82rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .nav-top a:hover { text-decoration: underline; }
+
+    .row-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 1rem;
+      padding: 0.65rem 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.6rem;
+    }
+    .row-top .meta { flex: 1 1 8rem; min-width: 0; }
+    .row-top .tag {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.15rem;
+    }
+    .row-top .hint { margin: 0; font-size: 0.78rem; color: var(--muted); line-height: 1.35; }
+    .timer {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 0.95rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--warn);
+      padding: 0.35rem 0.55rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .q-line { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.5rem; padding: 0 0.1rem; }
+    .q-line strong { color: var(--accent-2); }
+
+    header { text-align: center; margin-bottom: 0.65rem; }
+    header h1 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.15rem; color: var(--text); }
+    header .sub { margin: 0; font-size: 0.85rem; color: var(--muted); }
+    .credit { margin: 0.25rem 0 0; font-size: 0.8rem; color: var(--muted); }
+    .credit strong { color: var(--accent); }
+    .hint-tap { font-size: 0.68rem; color: var(--muted); margin: 0.25rem 0 0; }
+
+    .tabs {
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      margin-bottom: 0.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .tabs button {
+      flex: 1;
+      min-height: 44px;
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .tabs button.active { background: var(--surface-2); color: var(--text); }
+
+    .panel[hidden] { display: none !important; }
+
+    .toolbar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    @media (min-width: 480px) {
+      .toolbar { flex-flow: row wrap; align-items: center; }
+    }
+
+    select, input[type="number"], input[type="text"] {
+      width: 100%;
+      min-height: var(--touch);
+      padding: 0 0.65rem;
+      font: inherit;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    @media (min-width: 480px) {
+      select, input[type="number"], input[type="text"] { flex: 1 1 11rem; width: auto; }
+    }
+
+    .field-label { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.25rem; display: block; }
+
+    .seg {
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .seg button {
+      flex: 1;
+      min-height: 42px;
+      padding: 0.25rem 0.2rem;
+      font: inherit;
+      font-size: clamp(0.68rem, 2.5vw, 0.76rem);
+      font-weight: 600;
+      color: var(--muted);
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .seg button.active { background: var(--surface-2); color: var(--text); }
+
+    .progress {
+      width: 100%;
+      height: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress > i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 99px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--touch);
+      padding: 0 0.75rem;
+      font: inherit;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .btn-primary { background: #0284c7; border-color: #0369a1; color: #fff; }
+    .btn-danger { background: #b91c1c; border-color: #991b1b; color: #fff; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 0.9rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .q-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+    }
+    .badge {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.12);
+      padding: 0.3rem 0.55rem;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+    }
+    .q-num {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--warn);
+      padding: 0.2rem 0.45rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg);
+    }
+    .q-block { margin-bottom: 0.85rem; }
+    .q-block .label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25rem;
+    }
+    .q-block p { margin: 0; font-size: 1rem; line-height: 1.48; }
+    .q-block.ar { direction: rtl; text-align: right; }
+
+    .options { display: flex; flex-direction: column; gap: 0.45rem; }
+
+    .opt {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      width: 100%;
+      min-height: var(--touch);
+      padding: 0.65rem 0.85rem;
+      text-align: left;
+      font: inherit;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .opt .letter {
+      flex-shrink: 0;
+      width: 1.85rem;
+      height: 1.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--accent-2);
+    }
+    .opt.selected { border-color: var(--accent); background: rgba(56, 189, 248, 0.08); }
+    .opt.correct { border-color: var(--ok); background: var(--ok-bg); }
+    .opt.correct .letter { color: var(--ok); border-color: var(--ok); }
+    .opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
+    .opt.wrong .letter { color: var(--bad); border-color: var(--bad); }
+    .opt.ar { direction: rtl; flex-direction: row-reverse; text-align: right; }
+    .opt .txt { flex: 1; min-width: 0; }
+
+    .tf-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem;
+      margin-top: 0.5rem;
+    }
+    .tf-btn {
+      min-height: 52px;
+      font: inherit;
+      font-weight: 700;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .tf-btn.selected { border-color: var(--accent); background: rgba(56, 189, 248, 0.1); }
+    .tf-btn.correct { border-color: var(--ok); background: var(--ok-bg); }
+    .tf-btn.wrong { border-color: var(--bad); background: var(--bad-bg); }
+
+    .biling .ar-line { display: block; }
+    .biling .en-line {
+      display: block;
+      font-size: 0.85em;
+      color: var(--muted);
+      margin-top: 0.35em;
+    }
+
+    .reveal-wrap { margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid var(--border); }
+    .reveal-wrap.hidden { display: none; }
+
+    .answer-line { font-size: 0.88rem; margin-bottom: 0.45rem; }
+    .answer-line strong { color: var(--ok); }
+    .explain { margin: 0; font-size: 0.86rem; color: var(--muted); line-height: 1.45; }
+    .explain.ar { direction: rtl; text-align: right; color: var(--text); }
+
+    .nav-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem;
+    }
+    .nav-row #toggleAnsStudy { grid-column: 1 / -1; }
+
+    .exam-setup .grid2 {
+      display: grid;
+      gap: 0.65rem;
+      margin-bottom: 0.65rem;
+    }
+    @media (min-width: 420px) {
+      .exam-setup .grid2 { grid-template-columns: 1fr 1fr; align-items: end; }
+    }
+
+    .name-card {
+      padding: 0.85rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.65rem;
+    }
+    .name-card.readonly p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .name-card.readonly strong { color: var(--accent); }
+
+    .err {
+      padding: 0.85rem;
+      background: var(--bad-bg);
+      border: 1px solid rgba(248, 113, 113, 0.35);
+      border-radius: var(--radius);
+      color: #fecaca;
+      font-size: 0.88rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-back {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.88);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.12s ease, visibility 0.12s;
+    }
+    .modal-back.open { opacity: 1; visibility: visible; }
+    .modal {
+      width: 100%;
+      max-width: 22rem;
+      padding: 1.25rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .modal h2 { margin: 0 0 0.35rem; font-size: 1.1rem; color: var(--text); }
+    .modal .stat {
+      font-family: var(--mono);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--warn);
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+    .modal .detail { margin: 0 0 1rem; font-size: 0.88rem; color: var(--muted); line-height: 1.45; }
+    .modal .btn-row .btn { width: 100%; }
+
+    .modal-wide { max-width: 26rem; max-height: 90dvh; overflow: auto; }
+
+    /* Certificate */
+    .cert-box {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border: 2px solid rgba(56, 189, 248, 0.35);
+      border-radius: 12px;
+      text-align: center;
+    }
+    .cert-box h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .cert-box .cert-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 0.75rem 0;
+      color: var(--text);
+    }
+    .cert-box .cert-meta { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin: 0.5rem 0; }
+    .cert-seal {
+      margin-top: 1rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    footer {
+      margin-top: 1.25rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .credit-footer { margin: 0; font-size: 0.82rem; color: var(--muted); }
+    .credit-footer strong { color: var(--accent); }
+
+    @media print {
+      body * { visibility: hidden; }
+      #certPrint, #certPrint * { visibility: visible; }
+      #certPrint {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #fff !important;
+        color: #111 !important;
+        padding: 2rem !important;
+      }
+      #certPrint .cert-box {
+        border: 3px solid #0369a1 !important;
+        background: #fff !important;
+      }
+      #certPrint h3, #certPrint .cert-name { color: #0f172a !important; }
+      #certPrint .cert-meta, #certPrint .cert-seal { color: #334155 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav-top">
+      <a href="index.html" data-ui="linkBank">MCQ Bank</a>
+      <span style="color:var(--border)">·</span>
+      <span style="font-size:0.82rem;color:var(--muted)" data-ui="hereLabel">Final bank</span>
+    </div>
+
+    <div class="row-top" id="barTop" hidden>
+      <div class="meta">
+        <span class="tag" id="barTag" data-ui="barTagStudy">Study</span>
+        <p class="hint" id="barHint" data-ui="barHintStudy">Browse and reveal answers.</p>
+      </div>
+      <div class="timer" id="timer" aria-live="polite">00:00</div>
+    </div>
+
+    <p class="q-line" id="qCount" hidden></p>
+
+    <header>
+      <h1 id="pageTitle">Final Question Bank</h1>
+      <p class="sub" id="pageSub"></p>
+      <p class="credit" id="creditHead">By <strong>Mustafa Rabbah</strong></p>
+      <p class="hint-tap" data-ui="hintTap" hidden></p>
+    </header>
+
+    <div id="loadErr" class="err" hidden></div>
+
+    <div id="app" hidden>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tabStudy" class="active" data-ui="tabStudy">Study</button>
+        <button type="button" role="tab" id="tabExam" data-ui="tabExam">Exam</button>
+      </div>
+
+      <div id="panelStudy" class="panel">
+        <div class="toolbar">
+          <label>
+            <span class="visually-hidden" data-ui="categoryLabel">Filter</span>
+            <select id="category" aria-label="Filter"></select>
+          </label>
+          <div class="seg" role="group" aria-label="Display">
+            <button type="button" data-mode="both" class="active" data-ui="modeBoth">EN + عربي</button>
+            <button type="button" data-mode="en" data-ui="modeEn">English</button>
+            <button type="button" data-mode="ar" data-ui="modeAr">العربية</button>
+          </div>
+          <div class="progress" aria-hidden="true"><i id="progressFillStudy"></i></div>
+        </div>
+
+        <article class="card" id="cardStudy"></article>
+
+        <div class="nav-row">
+          <button type="button" class="btn" id="prevStudy" data-ui="prev">← Prev</button>
+          <button type="button" class="btn" id="nextStudy" data-ui="next">Next →</button>
+          <button type="button" class="btn btn-primary" id="toggleAnsStudy" data-ui="showAnswer">Key</button>
+        </div>
+
+        <div style="margin-top:0.55rem;display:flex;gap:0.45rem;flex-wrap:wrap">
+          <button type="button" class="btn btn-danger" id="resetStudy" data-ui="resetTimer">Reset timer</button>
+        </div>
+      </div>
+
+      <div id="panelExam" class="panel exam-setup" hidden>
+        <div id="nameBlock">
+          <div class="name-card" id="nameInputCard">
+            <label class="field-label" for="studentName" data-ui="nameLabel">Full name (saved once on this device)</label>
+            <input type="text" id="studentName" autocomplete="name" maxlength="120" />
+            <button type="button" class="btn btn-primary" style="margin-top:0.5rem;width:100%" id="saveName" data-ui="saveName">Save name</button>
+          </div>
+          <div class="name-card readonly" id="nameSavedCard" hidden>
+            <p><span data-ui="studentLabel">Student:</span> <strong id="savedNameDisplay"></strong></p>
+          </div>
+        </div>
+
+        <div id="examConfig">
+          <div class="grid2">
+            <div>
+              <span class="field-label" data-ui="qCountLabel">Questions</span>
+              <input type="number" id="examCount" min="1" value="10" />
+            </div>
+            <div>
+              <span class="field-label" data-ui="poolLabel">Pool</span>
+              <select id="examPool">
+                <option value="mixed" data-ui="poolMixed">Mixed (MCQ + T/F)</option>
+                <option value="mcq" data-ui="poolMcq">Multiple choice only</option>
+                <option value="tf" data-ui="poolTf">True / False only</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary" style="width:100%" id="startExam" data-ui="startExam">Start random exam</button>
+        </div>
+
+        <div id="examRun" hidden>
+          <div class="toolbar">
+            <div class="progress" aria-hidden="true"><i id="progressFillExam"></i></div>
+          </div>
+          <article class="card" id="cardExam"></article>
+          <div class="nav-row">
+            <button type="button" class="btn" id="prevExam" data-ui="prevEx">← Prev</button>
+            <button type="button" class="btn" id="nextExam" data-ui="nextEx">Next →</button>
+            <button type="button" class="btn btn-primary" id="finishExam" style="grid-column:1/-1" data-ui="finishExam">Finish &amp; grade</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="credit-footer" id="creditFoot">By <strong>Mustafa Rabbah</strong></p>
+    </footer>
+  </div>
+
+  <div class="modal-back" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle" hidden>
+    <div class="modal modal-wide">
+      <h2 id="resultTitle" data-ui="resultsTitle">Results</h2>
+      <p class="stat" id="resultScore">—</p>
+      <p class="detail" id="resultDetail"></p>
+      <div class="btn-row" style="display:flex;flex-direction:column;gap:0.45rem">
+        <button type="button" class="btn btn-primary" id="openCert" data-ui="openCert">Certificate</button>
+        <button type="button" class="btn" id="closeResult" data-ui="closeResult">Close</button>
+      </div>
+      <div id="certPrint" hidden>
+        <div class="cert-box">
+          <h3 data-ui="certTitle">Certificate</h3>
+          <p class="cert-name" id="certNameLine"></p>
+          <p class="cert-meta" id="certCourseLine"></p>
+          <p class="cert-meta" id="certDateLine"></p>
+          <p class="cert-meta" id="certScoreLine"></p>
+          <p class="cert-meta" id="certPointsLine"></p>
+          <div class="cert-seal" data-ui="certSeal">Database Security — Final assessment</div>
+        </div>
+        <button type="button" class="btn btn-primary" style="width:100%;margin-top:0.75rem" id="printCert" data-ui="printCert">Print</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const NAME_KEY = "ds_final_student_name";
+    const UI_STR = {
+      en: {
+        linkBank: "MCQ Bank",
+        hereLabel: "Final bank",
+        tabStudy: "Study",
+        tabExam: "Exam",
+        categoryLabel: "Filter",
+        modeBoth: "EN + عربي",
+        modeEn: "English",
+        modeAr: "العربية",
+        prev: "← Prev",
+        next: "Next →",
+        showAnswer: "Key",
+        hideAnswer: "Hide",
+        correctPrefix: "Correct:",
+        barTagStudy: "Study",
+        barHintStudy: "Use filter and key to review.",
+        barTagExam: "Timed exam",
+        barHintExam: "Answer all, then finish to see your score.",
+        resetTimer: "Reset timer",
+        nameLabel: "Full name (saved once on this device)",
+        saveName: "Save name",
+        studentLabel: "Student:",
+        qCountLabel: "Number of questions",
+        poolLabel: "Question pool",
+        poolMixed: "Mixed (MCQ + T/F)",
+        poolMcq: "Multiple choice only",
+        poolTf: "True / False only",
+        startExam: "Start random exam",
+        prevEx: "← Prev",
+        nextEx: "Next →",
+        finishExam: "Finish & grade",
+        resultsTitle: "Exam results",
+        resultsLine: (c, w, t) => `Correct: ${c} · Wrong: ${w} · Total: ${t}.`,
+        pointsLine: (p, max) => `Points: ${p} / ${max}`,
+        openCert: "Show certificate",
+        closeResult: "Close",
+        certTitle: "Certificate of completion",
+        printCert: "Print certificate",
+        certCourse: (title) => title,
+        certDate: (d) => `Date: ${d}`,
+        certScoreTxt: (c, w) => `Correct: ${c} · Wrong: ${w}`,
+        certPointsTxt: (p, max) => `Score (points): ${p} / ${max}`,
+        trueBtn: "True",
+        falseBtn: "False",
+        tfKind: "True / False",
+        mcqKind: "MCQ",
+        hintTap: "Double-tap title: English / العربية",
+        credit: "By ",
+        creditName: "Mustafa Rabbah",
+        loadErr: "Could not load final_mcqs.json. Serve the folder over HTTP (e.g. python -m http.server).",
+        needName: "Enter and save your name first.",
+        badCount: "Invalid number of questions.",
+      },
+      ar: {
+        linkBank: "بنك MCQ",
+        hereLabel: "البنك النهائي",
+        tabStudy: "مراجعة",
+        tabExam: "اختبار",
+        categoryLabel: "تصفية",
+        modeBoth: "إنجليزي + عربي",
+        modeEn: "English",
+        modeAr: "العربية",
+        prev: "→ السابق",
+        next: "التالي ←",
+        showAnswer: "المفتاح",
+        hideAnswer: "إخفاء",
+        correctPrefix: "الصحيح:",
+        barTagStudy: "مراجعة",
+        barHintStudy: "صفِّ واستخدم المفتاح للمراجعة.",
+        barTagExam: "امتحان",
+        barHintExam: "أجب ثم أنهِ لرؤية النتيجة.",
+        resetTimer: "إعادة المؤقت",
+        nameLabel: "الاسم الكامل (يُحفظ مرة واحدة على هذا الجهاز)",
+        saveName: "حفظ الاسم",
+        studentLabel: "الطالب:",
+        qCountLabel: "عدد الأسئلة",
+        poolLabel: "نوع الأسئلة",
+        poolMixed: "مختلط (اختيار + صح/خطأ)",
+        poolMcq: "اختيار من متعدد فقط",
+        poolTf: "صح أو خطأ فقط",
+        startExam: "بدء اختبار عشوائي",
+        prevEx: "→ السابق",
+        nextEx: "التالي ←",
+        finishExam: "إنهاء وتقييم",
+        resultsTitle: "نتيجة الاختبار",
+        resultsLine: (c, w, t) => `صحيح: ${c} · خطأ: ${w} · المجموع: ${t}.`,
+        pointsLine: (p, max) => `النقاط: ${p} / ${max}`,
+        openCert: "عرض الشهادة",
+        closeResult: "إغلاق",
+        certTitle: "شهادة إتمام",
+        printCert: "طباعة الشهادة",
+        certCourse: (title) => title,
+        certDate: (d) => `التاريخ: ${d}`,
+        certScoreTxt: (c, w) => `صحيح: ${c} · خطأ: ${w}`,
+        certPointsTxt: (p, max) => `الدرجة (نقاط): ${p} / ${max}`,
+        trueBtn: "صح",
+        falseBtn: "خطأ",
+        tfKind: "صح / خطأ",
+        mcqKind: "اختيار",
+        hintTap: "اضغط العنوان مرتين للغة",
+        credit: "بواسطة ",
+        creditName: "مصطفى رباح",
+        loadErr: "تعذر تحميل final_mcqs.json",
+        needName: "احفظ اسمك أولاً.",
+        badCount: "عدد أسئلة غير صالح.",
+      },
+    };
+
+    let uiLang = "en";
+    let displayMode = "both";
+    let data = null;
+    let allQuestions = [];
+
+    let studyFiltered = [];
+    let studyIndex = 0;
+    let studyShowAnswer = false;
+    const studyAnswers = Object.create(null);
+    let timerId = null;
+    let examStart = 0;
+
+    let activeTab = "study";
+    let examList = [];
+    let examIndex = 0;
+    let examPoolType = "mixed";
+    const examAnswers = Object.create(null);
+    let lastResult = null;
+
+    function t(key) {
+      const v = UI_STR[uiLang][key];
+      if (typeof v === "function") return v;
+      return v ?? UI_STR.en[key];
+    }
+
+    function stripDash(s) {
+      return (s || "").replace(/^-\s+/, "").trim();
+    }
+
+    function escapeHtml(s) {
+      if (!s) return "";
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function poolQuestions(kind) {
+      if (!allQuestions.length) return [];
+      if (kind === "mcq") return allQuestions.filter((q) => q.type === "mcq");
+      if (kind === "tf") return allQuestions.filter((q) => q.type === "true_false");
+      return allQuestions.slice();
+    }
+
+    function getStoredName() {
+      try {
+        return localStorage.getItem(NAME_KEY) || "";
+      } catch {
+        return "";
+      }
+    }
+
+    function setStoredName(name) {
+      try {
+        localStorage.setItem(NAME_KEY, name.trim());
+      } catch (_) {}
+    }
+
+    function syncNameUI() {
+      const n = getStoredName();
+      document.getElementById("nameInputCard").hidden = !!n;
+      document.getElementById("nameSavedCard").hidden = !n;
+      document.getElementById("savedNameDisplay").textContent = n || "—";
+    }
+
+    function setCreditLines() {
+      const head = document.getElementById("creditHead");
+      const foot = document.getElementById("creditFoot");
+      if (uiLang === "ar") {
+        head.innerHTML = `${escapeHtml(t("credit"))}<strong dir="rtl">${escapeHtml(UI_STR.ar.creditName)}</strong>`;
+        foot.innerHTML = `${escapeHtml(t("credit"))}<strong dir="rtl">${escapeHtml(UI_STR.ar.creditName)}</strong>`;
+      } else {
+        head.innerHTML = `${escapeHtml(t("credit"))}<strong>${escapeHtml(UI_STR.en.creditName)}</strong>`;
+        foot.innerHTML = `${escapeHtml(t("credit"))}<strong>${escapeHtml(UI_STR.en.creditName)}</strong>`;
+      }
+    }
+
+    function applyUiStrings() {
+      document.querySelectorAll("[data-ui]").forEach((el) => {
+        const key = el.getAttribute("data-ui");
+        if (key === "categoryLabel") return;
+        const enVal = UI_STR.en[key];
+        if (typeof enVal === "function") return;
+        const val = enVal != null ? (uiLang === "ar" && UI_STR.ar[key] != null ? UI_STR.ar[key] : enVal) : null;
+        if (val != null && typeof val !== "function") el.textContent = val;
+      });
+      const opt = document.getElementById("examPool");
+      if (opt) {
+        const m = opt.querySelector("[data-ui=poolMixed]");
+        const mq = opt.querySelector("[data-ui=poolMcq]");
+        const tf = opt.querySelector("[data-ui=poolTf]");
+        if (m) m.textContent = t("poolMixed");
+        if (mq) mq.textContent = t("poolMcq");
+        if (tf) tf.textContent = t("poolTf");
+      }
+      document.querySelector("[data-ui=nameLabel]").textContent = t("nameLabel");
+      document.getElementById("studentName").placeholder = uiLang === "ar" ? "الاسم الكامل" : "Full name";
+      setCreditLines();
+      updateBarHint();
+    }
+
+    function updateBarHint() {
+      const tag = document.getElementById("barTag");
+      const hint = document.getElementById("barHint");
+      if (activeTab === "study") {
+        tag.textContent = t("barTagStudy");
+        hint.textContent = t("barHintStudy");
+      } else {
+        tag.textContent = t("barTagExam");
+        hint.textContent = t("barHintExam");
+      }
+    }
+
+    function startTimer() {
+      if (timerId) clearInterval(timerId);
+      examStart = Date.now();
+      const el = document.getElementById("timer");
+      function tick() {
+        const sec = Math.floor((Date.now() - examStart) / 1000);
+        el.textContent = `${String(Math.floor(sec / 60)).padStart(2, "0")}:${String(sec % 60).padStart(2, "0")}`;
+      }
+      tick();
+      timerId = setInterval(tick, 1000);
+    }
+
+    function categories(list) {
+      const s = new Set();
+      list.forEach((q) => s.add(q.category));
+      return [...s].sort();
+    }
+
+    let studySel = null;
+
+    function applyStudyFilter() {
+      const cat = document.getElementById("category").value;
+      studyFiltered = cat
+        ? allQuestions.filter((q) => q.category === cat)
+        : allQuestions.slice();
+      studyIndex = Math.min(studyIndex, Math.max(0, studyFiltered.length - 1));
+      studyShowAnswer = false;
+      syncStudySelection();
+      renderStudyCard();
+      updateStudyChrome();
+      startTimer();
+    }
+
+    function syncStudySelection() {
+      const q = studyFiltered[studyIndex];
+      studySel = q && studyAnswers[q.id] != null ? studyAnswers[q.id] : null;
+    }
+
+    function currentStudyQ() {
+      return studyFiltered[studyIndex];
+    }
+
+    function updateStudyChrome() {
+      const el = document.getElementById("qCount");
+      const q = currentStudyQ();
+      if (!studyFiltered.length) {
+        el.hidden = true;
+        el.textContent = "";
+        document.getElementById("progressFillStudy").style.width = "0%";
+        return;
+      }
+      el.hidden = false;
+      if (uiLang === "ar") {
+        el.innerHTML = `${q.type === "true_false" ? escapeHtml(t("tfKind")) : escapeHtml(t("mcqKind"))} · <strong>${studyIndex + 1}</strong> / <strong>${studyFiltered.length}</strong>${q ? ` · ${escapeHtml(q.category)}` : ""}`;
+      } else {
+        el.innerHTML = `${q.type === "true_false" ? "T/F" : "MCQ"} · <strong>${studyIndex + 1}</strong> / <strong>${studyFiltered.length}</strong>${q ? ` · ${escapeHtml(q.category)}` : ""}`;
+      }
+      document.getElementById("progressFillStudy").style.width = `${((studyIndex + 1) / studyFiltered.length) * 100}%`;
+      document.getElementById("toggleAnsStudy").textContent = studyShowAnswer ? t("hideAnswer") : t("showAnswer");
+    }
+
+    function renderMcqBlock(q, mode, { exam, reveal }) {
+      const showEn = mode !== "ar";
+      const showAr = mode !== "en" && (q.question_ar || displayMode === "ar");
+      let html = "";
+      if (q.type !== "mcq") return html;
+      if (showEn) {
+        html += `<div class="q-block"><div class="label">English</div><p>${escapeHtml(q.question)}</p></div>`;
+      }
+      if (showAr && q.question_ar) {
+        html += `<div class="q-block ar"><div class="label">العربية</div><p>${escapeHtml(stripDash(q.question_ar))}</p></div>`;
+      } else if (mode === "ar" && !q.question_ar) {
+        html += `<div class="q-block ar"><div class="label">العربية</div><p>${escapeHtml(q.question)}</p></div>`;
+      }
+
+      html += `<div class="options">`;
+      q.options.forEach((opt) => {
+        let cls = "opt";
+        if (mode === "ar") cls += " ar";
+        const isSel = exam ? examAnswers[q.id] === opt.letter : studySel === opt.letter;
+        if (isSel) cls += " selected";
+        if (reveal) {
+          if (opt.letter === q.correct_letter) cls += " correct";
+          else if (isSel) cls += " wrong";
+        }
+
+        let labelHtml;
+        if (mode === "en") {
+          labelHtml = escapeHtml(opt.text);
+        } else if (mode === "ar") {
+          labelHtml = escapeHtml(opt.text_ar ? stripDash(opt.text_ar) : opt.text);
+        } else if (opt.text_ar) {
+          labelHtml =
+            `<span class="biling">` +
+            `<span dir="rtl" class="ar-line">${escapeHtml(stripDash(opt.text_ar))}</span>` +
+            `<span dir="ltr" class="en-line">${escapeHtml(opt.text)}</span>` +
+            `</span>`;
+        } else {
+          labelHtml = escapeHtml(opt.text);
+        }
+
+        const dis = reveal ? " disabled" : "";
+        const dataExam = exam ? ` data-exam="1"` : "";
+        html += `<button type="button" class="${cls}" data-letter="${opt.letter}"${dataExam}${dis}>` +
+          `<span class="letter">${opt.letter}</span><span class="txt">${labelHtml}</span></button>`;
+      });
+      html += `</div>`;
+
+      if (reveal && q.correct_text) {
+        const corrEn = q.correct_text;
+        const corrAr = q.correct_text_ar ? stripDash(q.correct_text_ar) : "";
+        html += `<div class="reveal-wrap">`;
+        if (mode === "both" && corrAr) {
+          html += `<div class="answer-line"><strong>${escapeHtml(UI_STR.en.correctPrefix)}</strong> ${escapeHtml(corrEn)}</div>`;
+          html += `<div class="answer-line ar" dir="rtl"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
+        } else if (mode === "ar" && corrAr) {
+          html += `<div class="answer-line ar" dir="rtl"><strong>الصحيح:</strong> ${escapeHtml(corrAr)}</div>`;
+        } else {
+          html += `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${escapeHtml(corrEn)}</div>`;
+        }
+        if (q.explanation) html += `<p class="explain">${escapeHtml(q.explanation)}</p>`;
+        if (q.explanation_ar) html += `<p class="explain ar">${escapeHtml(stripDash(q.explanation_ar))}</p>`;
+        html += `</div>`;
+      }
+      return html;
+    }
+
+    function renderTfBlock(q, mode, { exam, reveal }) {
+      if (q.type !== "true_false") return "";
+      const showEn = mode !== "ar";
+      const showAr = mode !== "en" && q.statement_ar;
+      let stmtBlock = "";
+      if (showEn) {
+        stmtBlock += `<div class="q-block"><div class="label">Statement</div><p>${escapeHtml(q.statement)}</p></div>`;
+      }
+      if (showAr && q.statement_ar) {
+        stmtBlock += `<div class="q-block ar"><div class="label">العبارة</div><p>${escapeHtml(stripDash(q.statement_ar))}</p></div>`;
+      } else if (mode === "ar" && !q.statement_ar) {
+        stmtBlock += `<div class="q-block ar"><div class="label">العبارة</div><p>${escapeHtml(q.statement)}</p></div>`;
+      }
+
+      const sel = exam ? examAnswers[q.id] : studyAnswers[q.id];
+      const tSel = sel === true;
+      const fSel = sel === false;
+      let clsT = "tf-btn";
+      let clsF = "tf-btn";
+      if (tSel) clsT += " selected";
+      if (fSel) clsF += " selected";
+      if (reveal) {
+        if (q.correct_bool === true) clsT += " correct";
+        else clsF += " correct";
+        if (tSel && q.correct_bool !== true) clsT += " wrong";
+        if (fSel && q.correct_bool !== false) clsF += " wrong";
+      }
+
+      const dis = reveal ? " disabled" : "";
+      const examAttr = exam ? ' data-tf="1"' : "";
+      let row =
+        `<div class="tf-row">` +
+        `<button type="button" class="${clsT}" data-bool="true"${examAttr}${dis}>${escapeHtml(t("trueBtn"))}</button>` +
+        `<button type="button" class="${clsF}" data-bool="false"${examAttr}${dis}>${escapeHtml(t("falseBtn"))}</button>` +
+        `</div>`;
+
+      let tail = "";
+      if (reveal) {
+        const ok = q.correct_bool;
+        tail =
+          `<div class="reveal-wrap">` +
+          `<div class="answer-line"><strong>${escapeHtml(t("correctPrefix"))}</strong> ${ok ? "True" : "False"}</div>` +
+          `</div>`;
+      }
+
+      return stmtBlock + row + tail;
+    }
+
+    function renderStudyCard() {
+      const card = document.getElementById("cardStudy");
+      if (!studyFiltered.length) {
+        card.innerHTML = "<p>No questions.</p>";
+        return;
+      }
+      const q = studyFiltered[studyIndex];
+      studySel = studyAnswers[q.id] != null ? studyAnswers[q.id] : null;
+      const mode = displayMode;
+      const reveal = studyShowAnswer;
+
+      const kind = q.type === "true_false" ? t("tfKind") : "MCQ";
+      let html =
+        `<div class="q-head">` +
+        `<span class="badge">${escapeHtml(q.category)}</span>` +
+        `<span class="q-num">${escapeHtml(kind)} · ${escapeHtml(String(q.id))}</span>` +
+        `</div>`;
+
+      if (q.type === "mcq") {
+        html += renderMcqBlock(q, mode, { exam: false, reveal });
+      } else {
+        html += renderTfBlock(q, mode, { exam: false, reveal });
+      }
+
+      card.innerHTML = html;
+    }
+
+    function renderExamCard() {
+      const card = document.getElementById("cardExam");
+      if (!examList.length) {
+        card.innerHTML = "";
+        return;
+      }
+      const q = examList[examIndex];
+      const mode = displayMode;
+      const kind = q.type === "true_false" ? t("tfKind") : "MCQ";
+      let html =
+        `<div class="q-head">` +
+        `<span class="badge">${escapeHtml(q.category)}</span>` +
+        `<span class="q-num">${escapeHtml(kind)} · ${examIndex + 1}/${examList.length}</span>` +
+        `</div>`;
+
+      if (q.type === "mcq") {
+        html += renderMcqBlock(q, mode, { exam: true, reveal: false });
+      } else {
+        html += renderTfBlock(q, mode, { exam: true, reveal: false });
+      }
+      card.innerHTML = html;
+      document.getElementById("progressFillExam").style.width = `${((examIndex + 1) / examList.length) * 100}%`;
+    }
+
+    function initCategories() {
+      const sel = document.getElementById("category");
+      sel.innerHTML = "";
+      const all = document.createElement("option");
+      all.value = "";
+      all.textContent = uiLang === "ar" ? "الكل" : "All";
+      sel.appendChild(all);
+      categories(allQuestions).forEach((c) => {
+        const o = document.createElement("option");
+        o.value = c;
+        o.textContent = c;
+        sel.appendChild(o);
+      });
+    }
+
+    function gradeExam() {
+      let correct = 0;
+      let wrong = 0;
+      examList.forEach((q) => {
+        const a = examAnswers[q.id];
+        let ok = false;
+        if (a == null && a !== false) {
+          wrong++;
+          return;
+        }
+        if (q.type === "mcq") ok = a === q.correct_letter;
+        else ok = a === q.correct_bool;
+        if (ok) correct++;
+        else wrong++;
+      });
+      const total = examList.length;
+      lastResult = { correct, wrong, total, points: correct, maxPoints: total };
+      return lastResult;
+    }
+
+    function openResultModal() {
+      const g = gradeExam();
+      document.getElementById("resultScore").textContent = `${g.correct} / ${g.total}`;
+      const line = UI_STR[uiLang].resultsLine || UI_STR.en.resultsLine;
+      const pts = UI_STR[uiLang].pointsLine || UI_STR.en.pointsLine;
+      document.getElementById("resultDetail").textContent =
+        line(g.correct, g.wrong, g.total) + " " + pts(g.points, g.maxPoints);
+      document.getElementById("resultTitle").textContent = t("resultsTitle");
+      document.getElementById("certPrint").hidden = true;
+      const modal = document.getElementById("resultModal");
+      modal.hidden = false;
+      requestAnimationFrame(() => modal.classList.add("open"));
+    }
+
+    function closeResultModal() {
+      const modal = document.getElementById("resultModal");
+      modal.classList.remove("open");
+      setTimeout(() => {
+        modal.hidden = true;
+      }, 120);
+    }
+
+    function fillCertificate() {
+      const g = lastResult || gradeExam();
+      const name = getStoredName() || (uiLang === "ar" ? "—" : "—");
+      document.getElementById("certNameLine").textContent = name;
+      document.getElementById("certCourseLine").textContent = data.title || "Final";
+      const d = new Date();
+      const ds = uiLang === "ar"
+        ? d.toLocaleDateString("ar", { year: "numeric", month: "long", day: "numeric" })
+        : d.toLocaleDateString("en", { year: "numeric", month: "long", day: "numeric" });
+      document.getElementById("certDateLine").textContent = (UI_STR[uiLang].certDate || UI_STR.en.certDate)(ds);
+      document.getElementById("certScoreLine").textContent = (UI_STR[uiLang].certScoreTxt || UI_STR.en.certScoreTxt)(g.correct, g.wrong);
+      document.getElementById("certPointsLine").textContent = (UI_STR[uiLang].certPointsTxt || UI_STR.en.certPointsTxt)(g.points, g.maxPoints);
+      document.querySelector("#certPrint h3").textContent = t("certTitle");
+    }
+
+    function studyCardClick(e) {
+      if (studyShowAnswer) return;
+      const opt = e.target.closest("button.opt");
+      if (opt && !opt.disabled) {
+        const q = currentStudyQ();
+        if (!q || q.type !== "mcq") return;
+        studySel = opt.getAttribute("data-letter");
+        studyAnswers[q.id] = studySel;
+        renderStudyCard();
+        return;
+      }
+      const tf = e.target.closest("button[data-bool]");
+      if (tf && !tf.disabled && !tf.hasAttribute("data-exam")) {
+        const q = currentStudyQ();
+        if (!q || q.type !== "true_false") return;
+        const b = tf.getAttribute("data-bool") === "true";
+        studyAnswers[q.id] = b;
+        studySel = b;
+        renderStudyCard();
+      }
+    }
+
+    function examCardClick(e) {
+      const opt = e.target.closest("button.opt[data-exam]");
+      if (opt && !opt.disabled) {
+        const q = examList[examIndex];
+        if (!q || q.type !== "mcq") return;
+        examAnswers[q.id] = opt.getAttribute("data-letter");
+        renderExamCard();
+        return;
+      }
+      const tf = e.target.closest("button[data-tf]");
+      if (tf && !tf.disabled) {
+        const q = examList[examIndex];
+        if (!q || q.type !== "true_false") return;
+        examAnswers[q.id] = tf.getAttribute("data-bool") === "true";
+        renderExamCard();
+      }
+    }
+
+    function setMode(mode) {
+      displayMode = mode;
+      document.querySelectorAll("#panelStudy .seg button").forEach((b) => {
+        b.classList.toggle("active", b.getAttribute("data-mode") === mode);
+      });
+      renderStudyCard();
+      renderExamCard();
+    }
+
+    function setUiLang(lang) {
+      uiLang = lang;
+      document.documentElement.lang = lang === "ar" ? "ar" : "en";
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      applyUiStrings();
+      initCategories();
+      if (data) {
+        document.getElementById("pageSub").textContent =
+          (uiLang === "ar"
+            ? `${allQuestions.length} عنصر · مراجعة واختبار`
+            : `${allQuestions.length} items · study & exam`);
+      }
+      document.getElementById("category").options[0].text =
+        uiLang === "ar" ? "الكل" : "All";
+      renderStudyCard();
+      renderExamCard();
+      updateStudyChrome();
+    }
+
+    function switchTab(which) {
+      activeTab = which;
+      document.getElementById("tabStudy").classList.toggle("active", which === "study");
+      document.getElementById("tabExam").classList.toggle("active", which === "exam");
+      document.getElementById("panelStudy").hidden = which !== "study";
+      document.getElementById("panelExam").hidden = which !== "exam";
+      updateBarHint();
+      document.getElementById("barTag").textContent =
+        which === "study" ? t("barTagStudy") : t("barTagExam");
+      document.getElementById("barHint").textContent =
+        which === "study" ? t("barHintStudy") : t("barHintExam");
+      if (which === "study") {
+        updateStudyChrome();
+      }
+    }
+
+    function maxCountForPool() {
+      return poolQuestions(document.getElementById("examPool").value).length;
+    }
+
+    async function main() {
+      document.getElementById("cardStudy").addEventListener("click", studyCardClick);
+      document.getElementById("cardExam").addEventListener("click", examCardClick);
+
+      try {
+        const res = await fetch("final_mcqs.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(String(res.status));
+        data = await res.json();
+      } catch (e) {
+        document.getElementById("loadErr").hidden = false;
+        document.getElementById("loadErr").textContent = t("loadErr");
+        setCreditLines();
+        return;
+      }
+
+      allQuestions = data.questions || [];
+      document.getElementById("pageTitle").textContent = data.title || "Final";
+      document.getElementById("pageSub").textContent = `${allQuestions.length} items · study & exam`;
+
+      initCategories();
+      studyFiltered = allQuestions.slice();
+      document.getElementById("app").hidden = false;
+      document.getElementById("barTop").hidden = false;
+      document.getElementById("qCount").hidden = false;
+
+      syncNameUI();
+
+      document.getElementById("category").addEventListener("change", () => {
+        studyIndex = 0;
+        studyShowAnswer = false;
+        applyStudyFilter();
+      });
+
+      document.querySelectorAll("#panelStudy .seg button").forEach((b) => {
+        b.addEventListener("click", () => setMode(b.getAttribute("data-mode")));
+      });
+
+      document.getElementById("prevStudy").addEventListener("click", () => {
+        if (studyIndex > 0) {
+          studyIndex--;
+          studyShowAnswer = false;
+          syncStudySelection();
+          renderStudyCard();
+          updateStudyChrome();
+        }
+      });
+
+      document.getElementById("nextStudy").addEventListener("click", () => {
+        if (studyIndex < studyFiltered.length - 1) {
+          studyIndex++;
+          studyShowAnswer = false;
+          syncStudySelection();
+          renderStudyCard();
+          updateStudyChrome();
+        }
+      });
+
+      document.getElementById("toggleAnsStudy").addEventListener("click", () => {
+        studyShowAnswer = !studyShowAnswer;
+        renderStudyCard();
+        updateStudyChrome();
+      });
+
+      document.getElementById("resetStudy").addEventListener("click", () => {
+        startTimer();
+      });
+
+      document.getElementById("tabStudy").addEventListener("click", () => switchTab("study"));
+      document.getElementById("tabExam").addEventListener("click", () => switchTab("exam"));
+
+      document.getElementById("saveName").addEventListener("click", () => {
+        const v = document.getElementById("studentName").value.trim();
+        if (v.length < 1) return;
+        setStoredName(v);
+        syncNameUI();
+      });
+
+      document.getElementById("startExam").addEventListener("click", () => {
+        if (!getStoredName()) {
+          alert(t("needName"));
+          return;
+        }
+        const kind = document.getElementById("examPool").value;
+        const pool = poolQuestions(kind);
+        const max = pool.length;
+        let n = parseInt(document.getElementById("examCount").value, 10);
+        if (!Number.isFinite(n) || n < 1) {
+          alert(t("badCount"));
+          return;
+        }
+        n = Math.min(n, max);
+        document.getElementById("examCount").value = String(n);
+        for (const k of Object.keys(examAnswers)) delete examAnswers[k];
+        examList = shuffle(pool).slice(0, n);
+        examIndex = 0;
+        examPoolType = kind;
+        document.getElementById("examConfig").hidden = true;
+        document.getElementById("examRun").hidden = false;
+        document.getElementById("nameInputCard").style.display = getStoredName() ? "none" : "block";
+        renderExamCard();
+        startTimer();
+      });
+
+      document.getElementById("prevExam").addEventListener("click", () => {
+        if (examIndex > 0) {
+          examIndex--;
+          renderExamCard();
+        }
+      });
+
+      document.getElementById("nextExam").addEventListener("click", () => {
+        if (examIndex < examList.length - 1) {
+          examIndex++;
+          renderExamCard();
+        }
+      });
+
+      document.getElementById("finishExam").addEventListener("click", openResultModal);
+
+      document.getElementById("closeResult").addEventListener("click", () => {
+        closeResultModal();
+        document.getElementById("examRun").hidden = true;
+        document.getElementById("examConfig").hidden = false;
+        syncNameUI();
+      });
+
+      document.getElementById("openCert").addEventListener("click", () => {
+        fillCertificate();
+        document.getElementById("certPrint").hidden = false;
+      });
+
+      document.getElementById("printCert").addEventListener("click", () => {
+        window.print();
+      });
+
+      document.getElementById("resultModal").addEventListener("click", (e) => {
+        if (e.target.id === "resultModal") closeResultModal();
+      });
+
+      document.querySelector("header h1").addEventListener("dblclick", () => {
+        setUiLang(uiLang === "en" ? "ar" : "en");
+      });
+
+      const hint = document.querySelector("[data-ui=hintTap]");
+      if (hint) {
+        hint.textContent = t("hintTap");
+        hint.hidden = false;
+      }
+
+      applyUiStrings();
+      applyStudyFilter();
+      updateStudyChrome();
+      renderExamCard();
+      startTimer();
+    }
+
+    main();
+  </script>
+</body>
+</html>
